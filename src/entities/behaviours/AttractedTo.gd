@@ -2,11 +2,12 @@ extends Node
 
 
 export var movement_per_second: float = 32.0
+export var goal_absolute_path: String = "Game/Fire"
 
 
 onready var target: KinematicBody2D = get_parent()
 # TODO: Use a better algorithm
-onready var goal: StaticBody2D = get_parent().get_parent().get_node("Fire")
+onready var goal: StaticBody2D = get_tree().root.get_node(goal_absolute_path)
 
 
 signal touching_goal
