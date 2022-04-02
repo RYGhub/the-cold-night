@@ -1,4 +1,4 @@
-extends Sprite
+extends Node2D
 
 
 export var intensity: float = 0.5 setget set_intensity

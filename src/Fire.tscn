@@ -7,8 +7,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
 
-[node name="Fire" type="Sprite"]
-texture = ExtResource( 2 )
+[node name="Fire" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="Light" type="Light2D" parent="."]
@@ -20,3 +19,6 @@ color = Color( 1, 0.592157, 0.592157, 1 )
 
 [node name="Shape" type="CollisionShape2D" parent="Body"]
 shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
