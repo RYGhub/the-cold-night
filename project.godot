@@ -8,16 +8,26 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Sprite",
+"class": "Fire",
+"language": "GDScript",
+"path": "res://src/Fire.gd"
+} ]
+_global_script_class_icons={
+"Fire": ""
+}
+
 [application]
 
 config/name="LD50"
-run/main_scene="res://src/MainMenu.tscn"
-config/icon="res://src/icon.png"
+run/main_scene="res://src/Game.tscn"
 
 [display]
 
 window/size/width=1280
 window/size/height=720
+window/size/resizable=false
 
 [physics]
 
