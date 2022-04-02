@@ -14,12 +14,3 @@ position = Vector2( 553, 296 )
 
 [node name="Fire" parent="." instance=ExtResource( 3 )]
 position = Vector2( 597, 323 )
-
-[node name="Fire2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 251, 458 )
-
-[node name="Fire3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 622, 549 )
-
-[node name="Fire4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 325, 147 )
