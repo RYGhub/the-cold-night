@@ -24,17 +24,17 @@ fire_path = NodePath("../PhaseOneContainer/Fire")
 
 [node name="Bell" type="AudioStreamPlayer" parent="PhaseOne/PhaseOneMusic"]
 stream = ExtResource( 10 )
-volume_db = -60.0
+volume_db = -80.0
 autoplay = true
 
 [node name="Choir" type="AudioStreamPlayer" parent="PhaseOne/PhaseOneMusic"]
 stream = ExtResource( 8 )
-volume_db = -60.0
+volume_db = -80.0
 autoplay = true
 
 [node name="Drum" type="AudioStreamPlayer" parent="PhaseOne/PhaseOneMusic"]
 stream = ExtResource( 9 )
-volume_db = -60.0
+volume_db = -80.0
 autoplay = true
 
 [node name="PhaseOneContainer" type="Node2D" parent="PhaseOne"]

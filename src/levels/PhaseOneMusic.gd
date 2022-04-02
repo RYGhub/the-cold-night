@@ -17,6 +17,10 @@ func _ready():
 
 func _on_fire_intensity_changed(value):
 	$Choir.volume_db = (smoothstep(choir_min, choir_max, value) - 1) * 60
+	$Choir.bus = "Master" if $Choir.volume_db > -60 else "Mute"
+
 	$Bell.volume_db = (smoothstep(bell_min, bell_max, value) - 1) * 60
+	$Bell.bus = "Master" if $Choir.volume_db > -60 else "Mute"
+
 	$Drum.volume_db = (smoothstep(drum_min, drum_max, value) - 1) * 60
-	pass
+	$Drum.bus = "Master" if $Choir.volume_db > -60 else "Mute"
