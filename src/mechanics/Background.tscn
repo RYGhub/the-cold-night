@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://src/Black.png" type="Texture" id=1]
-[ext_resource path="res://src/White.png" type="Texture" id=2]
-[ext_resource path="res://src/GimpWood.png" type="Texture" id=3]
+[ext_resource path="res://src/mechanics/Black.png" type="Texture" id=1]
+[ext_resource path="res://src/mechanics/White.png" type="Texture" id=2]
+[ext_resource path="res://src/mechanics/GimpWood.png" type="Texture" id=3]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Black.png 0"
