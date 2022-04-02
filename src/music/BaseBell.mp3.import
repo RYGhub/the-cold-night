@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/BaseBell.mp3-d9e3eb6f802cf5cf76c9dcde68c4dd9e.mp3str"
+
+[deps]
+
+source_file="res://src/music/BaseBell.mp3"
+dest_files=[ "res://.import/BaseBell.mp3-d9e3eb6f802cf5cf76c9dcde68c4dd9e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
