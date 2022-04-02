@@ -6,6 +6,7 @@ export var change_per_second: float = - 1.0 / 60.0
 export var min_intensity: float = 0
 export var max_intensity: float = INF
 
+signal intensity_changed(value)
 signal intensity_at_max
 signal intensity_at_min
 var intensity_reached_max_triggered: bool = false
@@ -19,6 +20,7 @@ func set_intensity(value):
 	# Update everything that needs to be updated when the intensity changes
 	$Light.texture_scale = value
 	# Trigger signals
+	emit_signal("intensity_changed", intensity)
 	# max intensity signal
 	if intensity == max_intensity:
 		emit_signal("intensity_at_max")
