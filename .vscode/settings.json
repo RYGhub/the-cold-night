@@ -1,6 +1,10 @@
 {
     "files.exclude": {
-        "**/.import": true
+        "**/*.import": true,
+        "**/*.png": true,
+        "**/*.tscn": true,
+        "**/*.tres": true,
+        "**/*.godot": true,
     },
     "editor.insertSpaces": false,
     "editor.renderWhitespace": "all"
