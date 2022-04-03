@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/FireConcept.png-78e15c8363ed2ec1d29d99bca93f7c94.stex"
+path="res://.import/FireFlame.png-7fced22da2a25087c1e84afb4e3fc0d5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/entities/FireConcept.png"
-dest_files=[ "res://.import/FireConcept.png-78e15c8363ed2ec1d29d99bca93f7c94.stex" ]
+source_file="res://src/entities/fire/FireFlame.png"
+dest_files=[ "res://.import/FireFlame.png-7fced22da2a25087c1e84afb4e3fc0d5.stex" ]
 
 [params]
 

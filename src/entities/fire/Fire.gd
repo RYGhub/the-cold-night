@@ -18,7 +18,7 @@ signal intensity_reached_max
 func set_intensity(value):
 	intensity = clamp(value, min_intensity, max_intensity)
 	# Update everything that needs to be updated when the intensity changes
-	$Light.texture_scale = value
+	$Light.scale = Vector2(value, value)
 	# Trigger signals
 	emit_signal("intensity_changed", intensity)
 	# max intensity signal
