@@ -7,7 +7,7 @@
 [ext_resource path="res://src/sounds/Arrow.mp3" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16, 8 )
+extents = Vector2( 16, 3 )
 
 [node name="Bullet" type="KinematicBody2D"]
 collision_layer = 4
