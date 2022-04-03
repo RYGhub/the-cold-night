@@ -8,8 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "Alliance",
+"language": "GDScript",
+"path": "res://src/entities/behaviours/Alliance.gd"
+}, {
+"base": "Node",
+"class": "Ownership",
+"language": "GDScript",
+"path": "res://src/entities/behaviours/Ownership.gd"
+} ]
 _global_script_class_icons={
+"Alliance": "",
+"Ownership": ""
 }
 
 [application]
