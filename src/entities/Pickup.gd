@@ -1,7 +1,7 @@
 extends Area2D
 
 
-export var sprite: Texture = preload("res://src/mechanics/Branch1.png") setget set_sprite, get_sprite
+export var sprite: Texture = preload("res://src/mechanics/White.png") setget set_sprite, get_sprite
 export var duration_seconds: float = 1.0 setget set_duration, get_duration
 export var despawn_seconds: float = INF setget set_despawn, get_despawn
 
