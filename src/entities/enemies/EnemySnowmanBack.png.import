@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EnemySnowmanLeft.png-651743351802fe1f1144983f041aa579.stex"
+path="res://.import/EnemySnowmanBack.png-d689ef59a615a3796d8d5dee024e3fb9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/mechanics/EnemySnowmanLeft.png"
-dest_files=[ "res://.import/EnemySnowmanLeft.png-651743351802fe1f1144983f041aa579.stex" ]
+source_file="res://src/entities/enemies/EnemySnowmanBack.png"
+dest_files=[ "res://.import/EnemySnowmanBack.png-d689ef59a615a3796d8d5dee024e3fb9.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

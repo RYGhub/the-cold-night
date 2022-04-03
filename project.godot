@@ -44,6 +44,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://FireExtinguisherEnemy.gd"
 }, {
+"base": "AnimatedSprite",
+"class": "FourSidedSprite",
+"language": "GDScript",
+"path": "res://src/behaviours/graphics/FourSidedSprite.gd"
+}, {
 "base": "Node",
 "class": "Ownership",
 "language": "GDScript",
@@ -75,9 +80,14 @@ _global_script_classes=[ {
 "path": "res://src/behaviours/spawning/SpawnEveryPeriod.gd"
 }, {
 "base": "Node",
-"class": "TeleportToScreenEdge",
+"class": "TeleportToRandomPosition",
 "language": "GDScript",
 "path": "res://src/behaviours/movement/TeleportToScreenEdge.gd"
+}, {
+"base": "Node",
+"class": "TeleportToScreenEdge",
+"language": "GDScript",
+"path": "res://src/behaviours/movement/TeleportToRandomPosition.gd"
 } ]
 _global_script_class_icons={
 "Alliance": "",
@@ -87,12 +97,14 @@ _global_script_class_icons={
 "DropLoot": "",
 "ErraticMovement": "",
 "FireExtinguisherEnemy": "",
+"FourSidedSprite": "",
 "Ownership": "",
 "PlayerMovement": "",
 "RNG": "",
 "RandomRotationOnReady": "",
 "SetSpawnedGoalTo": "",
 "SpawnEveryPeriod": "",
+"TeleportToRandomPosition": "",
 "TeleportToScreenEdge": ""
 }
 
