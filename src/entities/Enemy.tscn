@@ -28,5 +28,4 @@ texture = ExtResource( 1 )
 
 [node name="Alliance" parent="." instance=ExtResource( 5 )]
 alliance = -1
-
 [connection signal="dead" from="Damageable" to="." method="_on_Damageable_dead"]
