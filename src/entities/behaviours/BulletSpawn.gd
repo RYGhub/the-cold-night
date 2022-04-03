@@ -19,3 +19,4 @@ func shoot():
 	var rotation = new_bullet.get_angle_to(source.get_global_mouse_position())
 	new_bullet.set_rotation(rotation)
 	new_bullet.get_node("Ownership").entity_owner = source
+	new_bullet.add_collision_exception_with(source)

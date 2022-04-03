@@ -10,6 +10,7 @@
 extents = Vector2( 16, 16 )
 
 [node name="Enemy" type="KinematicBody2D"]
+collision_layer = 3
 
 [node name="Shape" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

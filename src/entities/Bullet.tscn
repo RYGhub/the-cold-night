@@ -1,18 +1,20 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/mechanics/White.png" type="Texture" id=1]
 [ext_resource path="res://src/entities/behaviours/BulletMovement.gd" type="Script" id=2]
 [ext_resource path="res://src/entities/behaviours/Ownership.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/entities/Bullet.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 8 )
 
 [node name="Bullet" type="KinematicBody2D"]
-collision_layer = 2
+collision_layer = 4
+collision_mask = 2
+script = ExtResource( 4 )
 
 [node name="Shape" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
-disabled = true
 
 [node name="Sprite" type="Sprite" parent="Shape"]
 scale = Vector2( 1, 0.5 )
@@ -22,3 +24,5 @@ texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="Ownership" parent="." instance=ExtResource( 3 )]
+
+[connection signal="hit" from="BulletMovement" to="." method="_on_BulletMovement_hit"]
