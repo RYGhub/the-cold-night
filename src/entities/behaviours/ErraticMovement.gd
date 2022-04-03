@@ -5,7 +5,12 @@ export var movement_per_second: float = 16.0
 
 
 onready var target: KinematicBody2D = get_parent()
-onready var rng = RandomNumberGenerator.new()
+var rng: RandomNumberGenerator
+
+
+func _ready():
+	rng = RandomNumberGenerator.new()
+	rng.randomize()
 
 
 func _physics_process(_delta):
