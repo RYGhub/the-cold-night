@@ -18,7 +18,7 @@ signal intensity_reached_max
 func set_intensity(value):
 	intensity = clamp(value, min_intensity, max_intensity)
 	# Update everything that needs to be updated when the intensity changes
-	$Light.scale = Vector2(value, value)
+	$Flame.scale = Vector2(value, value)
 	# Trigger signals
 	emit_signal("intensity_changed", intensity)
 	# max intensity signal
@@ -41,3 +41,9 @@ func set_intensity(value):
 
 func _process(delta):
 	set_intensity(intensity + (delta * change_per_second))
+
+
+func _on_Flame_body_entered(body: PhysicsBody2D):
+	var flammable = body.get_node("Flammable")
+	if flammable != null:
+		flammable.catch_fire()

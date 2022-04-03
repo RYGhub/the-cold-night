@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/mechanics/Light.png" type="Texture" id=1]
 [ext_resource path="res://src/entities/fire/FirePit.png" type="Texture" id=2]
@@ -9,27 +9,41 @@
 radius = 20.0
 height = 10.0
 
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 14.0
+
 [sub_resource type="CanvasItemMaterial" id=2]
 blend_mode = 1
 
-[node name="Fire" type="StaticBody2D"]
+[node name="Fire" type="Node2D"]
 script = ExtResource( 3 )
 
-[node name="Shape" type="CollisionShape2D" parent="."]
+[node name="Firepit" type="StaticBody2D" parent="."]
+
+[node name="Shape" type="CollisionShape2D" parent="Firepit"]
 rotation = 1.5708
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="Shape"]
+[node name="Sprite" type="Sprite" parent="Firepit/Shape"]
 rotation = -1.5708
 texture = ExtResource( 2 )
 
-[node name="Light" type="Light2D" parent="."]
+[node name="Flame" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="Light" type="Light2D" parent="Flame"]
 texture = ExtResource( 1 )
 texture_scale = 0.5
 color = Color( 1, 0.607843, 0, 1 )
 
-[node name="FlameSprite" type="Sprite" parent="Light"]
+[node name="Shape" type="CollisionShape2D" parent="Flame"]
+position = Vector2( 0, -20 )
+shape = SubResource( 3 )
+
+[node name="FlameSprite" type="Sprite" parent="Flame/Shape"]
 material = SubResource( 2 )
 z_index = 1
 texture = ExtResource( 4 )
-offset = Vector2( 0, -20 )
+
+[connection signal="body_entered" from="Flame" to="." method="_on_Flame_body_entered"]

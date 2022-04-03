@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/behaviours/damage/Alliance.gd"
 }, {
+"base": "KinematicBody2D",
+"class": "ArrowAlternative",
+"language": "GDScript",
+"path": "res://src/entities/bullets/ArrowAlternative.gd"
+}, {
 "base": "Node",
 "class": "AttractedToMovement",
 "language": "GDScript",
@@ -43,6 +48,11 @@ _global_script_classes=[ {
 "class": "FireExtinguisherEnemy",
 "language": "GDScript",
 "path": "res://FireExtinguisherEnemy.gd"
+}, {
+"base": "Node",
+"class": "Flammable",
+"language": "GDScript",
+"path": "res://src/behaviours/damage/Flammable.gd"
 }, {
 "base": "AnimatedSprite",
 "class": "FourSidedSprite",
@@ -91,12 +101,14 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Alliance": "",
+"ArrowAlternative": "",
 "AttractedToMovement": "",
 "BulletMovement": "",
 "Damaging": "",
 "DropLoot": "",
 "ErraticMovement": "",
 "FireExtinguisherEnemy": "",
+"Flammable": "",
 "FourSidedSprite": "",
 "Ownership": "",
 "PlayerMovement": "",
