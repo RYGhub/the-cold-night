@@ -25,4 +25,8 @@ func do_damage(to: Node):
 	damageable.health -= damage
 	# Alas, destroy self
 	if destroy_on_damage:
-		queue_free()
+		parent.queue_free()
+
+
+func do_damage_to_collider(collision: KinematicCollision2D):
+	do_damage(collision.collider)

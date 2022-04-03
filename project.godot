@@ -44,11 +44,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/behaviours/movement/ErraticMovement.gd"
 }, {
-"base": "KinematicBody2D",
-"class": "FireExtinguisherEnemy",
-"language": "GDScript",
-"path": "res://FireExtinguisherEnemy.gd"
-}, {
 "base": "Node",
 "class": "Flammable",
 "language": "GDScript",
@@ -117,7 +112,6 @@ _global_script_class_icons={
 "Damaging": "",
 "DropLoot": "",
 "ErraticMovement": "",
-"FireExtinguisherEnemy": "",
 "Flammable": "",
 "FourSidedSprite": "",
 "FreeWhenShapeIsOffScreen": "",

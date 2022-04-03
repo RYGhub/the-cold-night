@@ -35,7 +35,7 @@ collision_mask = 4
 [node name="Light" type="Light2D" parent="Flame"]
 texture = ExtResource( 1 )
 texture_scale = 0.5
-color = Color( 1, 0.607843, 0, 1 )
+color = Color( 1, 0.792157, 0.392157, 1 )
 
 [node name="Shape" type="CollisionShape2D" parent="Flame"]
 position = Vector2( 0, -20 )
