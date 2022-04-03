@@ -11,6 +11,6 @@ func _process(_delta):
 func _on_Click():
 	var new_bullet = bullet.instance()
 	new_bullet.set_position(spawner.position)
-	var bullet_rotation = rad2deg(new_bullet.get_angle_to(get_global_mouse_position()))
-	new_bullet.set_rotation_degrees(bullet_rotation)
+	var bullet_rotation = new_bullet.get_angle_to(get_global_mouse_position())
+	new_bullet.set_rotation(bullet_rotation)
 	add_child(new_bullet)
