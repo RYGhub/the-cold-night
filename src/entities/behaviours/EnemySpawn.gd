@@ -26,8 +26,8 @@ func _on_Timer_timeout():
 	
 	var random = rng.randi_range(1, 4)
 	if random == 1: position = Vector2(0, rng.randf_range(0, 640))
-	elif random == 1: position = Vector2(1280, rng.randf_range(0, 640))
-	elif random == 1: position = Vector2(rng.randf_range(0, 1280), 0)
+	elif random == 2: position = Vector2(1280, rng.randf_range(0, 640))
+	elif random == 3: position = Vector2(rng.randf_range(0, 1280), 0)
 	else: position = Vector2(rng.randf_range(0, 640), 640)
 	
 	new_enemy.set_position(position)
