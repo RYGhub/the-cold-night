@@ -5,11 +5,24 @@ export var bullet: PackedScene = preload("res://src/entities/Bullet.tscn")
 export var bullet_container_node_path: String = "../.."
 onready var bullet_container_node: Node = get_node(bullet_container_node_path)
 onready var source: Node2D = get_parent()
+var _timer : Timer = null
 
+func _ready():
+	_timer = Timer.new()
+	add_child(_timer)
+	_timer.set_wait_time(0.3)
+	_timer.set_one_shot(true)
+	_timer.start()
 
 func _process(_delta):
-	if Input.is_action_just_pressed("player_shoot"):
+	print(_timer.get_time_left())
+	if Input.is_action_just_pressed("player_shoot") and _timer.get_time_left()==0:
 		shoot()
+		
+		#restart timer
+		_timer.set_wait_time(0.3)
+		_timer.set_one_shot(true)
+		_timer.start()
 
 
 func shoot():
