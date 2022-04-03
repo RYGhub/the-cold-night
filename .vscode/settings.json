@@ -6,6 +6,7 @@
         "**/*.tres": true,
         "**/*.godot": true,
         "**/*.kra": true,
+        "**/*.mp3": true,
     },
     "editor.insertSpaces": false,
     "editor.renderWhitespace": "all"
