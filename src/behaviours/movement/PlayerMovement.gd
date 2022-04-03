@@ -1,10 +1,11 @@
 extends Node
+class_name PlayerMovement
 
 
-export var movement_per_second: float = 96.0
+export var movement_per_second: float
 
 
-onready var target: KinematicBody2D = get_parent()
+onready var parent: KinematicBody2D = get_parent()
 
 
 func _physics_process(_delta):
@@ -18,4 +19,4 @@ func _physics_process(_delta):
 	if direction.length() > 1:
 		direction.normalized()
 
-	var _motion: Vector2 = target.move_and_slide(direction * movement_per_second, Vector2.ZERO)
+	var _motion: Vector2 = parent.move_and_slide(direction * movement_per_second, Vector2.ZERO)

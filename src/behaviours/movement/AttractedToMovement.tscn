@@ -1,9 +1,11 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://src/entities/behaviours/AttractedToMovement.gd" type="Script" id=1]
+[ext_resource path="res://src/behaviours/movement/AttractedToMovement.gd" type="Script" id=1]
 
 [node name="AttractedToMovement" type="Node"]
 script = ExtResource( 1 )
 __meta__ = {
-"_editor_description_": "Moves the parent KinematicBody2D towards the specified goal."
+"_editor_description_": "Moves the parent KinematicBody2D towards the specified goal.
+It does not automatically set a goal!"
 }
+movement_per_second = 32.0

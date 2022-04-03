@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/behaviours/damage/Damaging.gd" type="Script" id=1]
+
+[node name="Damaging" type="Node"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "Allows the object to damage Damageable nodes."
+}
+damage = 1
+destroy_on_damage = true
