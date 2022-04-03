@@ -6,6 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 [node name="Bullet" type="KinematicBody2D"]
+collision_layer = 2
 
 [node name="BulletMovement" type="Node" parent="."]
 script = ExtResource( 2 )
