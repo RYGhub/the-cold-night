@@ -32,4 +32,5 @@ alliance = -1
 
 [node name="BranchSpawn" type="Node" parent="."]
 script = ExtResource( 7 )
+
 [connection signal="dead" from="Damageable" to="." method="_on_Damageable_dead"]

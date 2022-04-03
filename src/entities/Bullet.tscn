@@ -4,7 +4,7 @@
 [ext_resource path="res://src/entities/behaviours/BulletMovement.gd" type="Script" id=2]
 [ext_resource path="res://src/entities/behaviours/Ownership.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/entities/Bullet.gd" type="Script" id=4]
-[ext_resource path="res://src/entities/behaviours/ArrowSound.gd" type="Script" id=5]
+[ext_resource path="res://src/sounds/Arrow.mp3" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 8 )
@@ -27,5 +27,7 @@ script = ExtResource( 2 )
 [node name="Ownership" parent="." instance=ExtResource( 3 )]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-script = ExtResource( 5 )
+stream = ExtResource( 5 )
+autoplay = true
+
 [connection signal="hit" from="BulletMovement" to="." method="_on_BulletMovement_hit"]
