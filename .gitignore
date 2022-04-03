@@ -17,3 +17,4 @@ data_*/
 
 # Krita garbage
 *~
+*.autosave.kra
