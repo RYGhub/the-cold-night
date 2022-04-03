@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 
 export var bullet: PackedScene = preload("res://src/entities/Bullet.tscn")
@@ -16,5 +16,5 @@ func shoot():
 	var new_bullet = bullet.instance()
 	new_bullet.set_position(source.global_position)
 	bullet_container_node.add_child(new_bullet)
-	var rotation = new_bullet.get_angle_to(get_global_mouse_position())
+	var rotation = new_bullet.get_angle_to(source.get_global_mouse_position())
 	new_bullet.set_rotation(rotation)
