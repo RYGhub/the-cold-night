@@ -29,7 +29,5 @@ func teleport():
 		# Bottom
 		new_position = Vector2(rng.randf_range(0, bounds.y), bounds.y)
 	
-	print("Moving to to %s" % new_position)
 	parent.set_position(new_position)
-
 	emit_signal("teleported", parent.position)
