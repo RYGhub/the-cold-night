@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://src/mechanics/White.png" type="Texture" id=1]
+[ext_resource path="res://src/mechanics/Arrow.png" type="Texture" id=1]
 [ext_resource path="res://src/entities/behaviours/BulletMovement.gd" type="Script" id=2]
 [ext_resource path="res://src/entities/behaviours/Ownership.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/entities/Bullet.gd" type="Script" id=4]
