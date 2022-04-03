@@ -5,6 +5,7 @@
         "**/*.tscn": true,
         "**/*.tres": true,
         "**/*.godot": true,
+        "**/*.kra": true,
     },
     "editor.insertSpaces": false,
     "editor.renderWhitespace": "all"
