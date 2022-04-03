@@ -4,3 +4,6 @@
 
 [node name="Alliance" type="Node"]
 script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "Determines the friendliness of the parent node to the player."
+}
