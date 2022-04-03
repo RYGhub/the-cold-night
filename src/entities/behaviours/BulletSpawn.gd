@@ -18,3 +18,4 @@ func shoot():
 	bullet_container_node.add_child(new_bullet)
 	var rotation = new_bullet.get_angle_to(source.get_global_mouse_position())
 	new_bullet.set_rotation(rotation)
+	new_bullet.get_node("Ownership").entity_owner = source
