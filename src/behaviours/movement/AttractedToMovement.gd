@@ -11,7 +11,7 @@ export var goal_path: NodePath
 
 
 onready var parent: KinematicBody2D = get_parent()
-onready var goal: StaticBody2D = get_node(goal_path) if goal_path else null
+onready var goal: PhysicsBody2D = get_node(goal_path) if goal_path else null
 
 
 var _goal_reached_triggered: bool = false
