@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/mechanics/Black.png" type="Texture" id=1]
-[ext_resource path="res://src/entities/behaviours/ErraticMovement.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/entities/behaviours/AttractedTo.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/entities/behaviours/Damageable.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/entities/behaviours/Alliance.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/behaviours/ErraticMovement.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/behaviours/movement/AttractedToMovement.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/behaviours/Damageable.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/behaviours/Alliance.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/entities/Enemy.gd" type="Script" id=6]
-[ext_resource path="res://src/entities/behaviours/BranchSpawn.gd" type="Script" id=7]
+[ext_resource path="res://src/behaviours/BranchSpawn.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )

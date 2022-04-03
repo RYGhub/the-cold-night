@@ -1,10 +1,14 @@
 extends Node
 
 
-export var bullet: PackedScene = preload("res://src/entities/Bullet.tscn")
-export var bullet_container_node_path: String = "../.."
+export var bullet: PackedScene
+export var bullet_container_node_path: String
+
+
 onready var bullet_container_node: Node = get_node(bullet_container_node_path)
 onready var source: Node2D = get_parent()
+
+
 var _timer : Timer = null
 
 func _ready():

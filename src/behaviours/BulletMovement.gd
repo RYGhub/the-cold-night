@@ -1,10 +1,13 @@
 extends Node
 
-onready var target: KinematicBody2D = get_parent()
-export var movement_per_second: float = 400.0
-
 
 signal hit(collision)
+
+
+export var movement_per_second: float
+
+
+onready var target: KinematicBody2D = get_parent()
 
 
 func _physics_process(delta):

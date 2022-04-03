@@ -12,15 +12,21 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "Alliance",
 "language": "GDScript",
-"path": "res://src/entities/behaviours/Alliance.gd"
+"path": "res://src/behaviours/Alliance.gd"
+}, {
+"base": "Node",
+"class": "AttractedToMovement",
+"language": "GDScript",
+"path": "res://src/behaviours/movement/AttractedToMovement.gd"
 }, {
 "base": "Node",
 "class": "Ownership",
 "language": "GDScript",
-"path": "res://src/entities/behaviours/Ownership.gd"
+"path": "res://src/behaviours/Ownership.gd"
 } ]
 _global_script_class_icons={
 "Alliance": "",
+"AttractedToMovement": "",
 "Ownership": ""
 }
 

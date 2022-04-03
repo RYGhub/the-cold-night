@@ -8,7 +8,7 @@
 [ext_resource path="res://src/ui/TimeSurvived.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/entities/Pickup.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/entities/pickupeffects/ChangeFireIntensity.tscn" type="PackedScene" id=9]
-[ext_resource path="res://src/entities/behaviours/EnemySpawn.gd" type="Script" id=10]
+[ext_resource path="res://src/behaviours/EnemySpawn.gd" type="Script" id=10]
 [ext_resource path="res://src/levels/PhaseOneMusic.gd" type="Script" id=11]
 [ext_resource path="res://src/ui/HealthBar.tscn" type="PackedScene" id=14]
 
