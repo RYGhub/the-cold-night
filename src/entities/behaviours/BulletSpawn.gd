@@ -1,16 +1,20 @@
-extends Position2D
+extends Node2D
 
-# Items
-onready var bullet = preload("res://src/entities/Bullet.tscn")
-onready var spawner = get_node("/root/Game/PhaseOne/PhaseOneContainer/Player")
+
+export var bullet: PackedScene = preload("res://src/entities/Bullet.tscn")
+export var bullet_container_node_path: String = "../.."
+onready var bullet_container_node: Node = get_node(bullet_container_node_path)
+onready var source: Node2D = get_parent()
+
 
 func _process(_delta):
-	if Input.is_action_just_pressed("shoot"):
-		_on_Click()
+	if Input.is_action_just_pressed("player_shoot"):
+		shoot()
 
-func _on_Click():
+
+func shoot():
 	var new_bullet = bullet.instance()
-	new_bullet.set_position(spawner.position)
-	var bullet_rotation = new_bullet.get_angle_to(get_global_mouse_position())
-	new_bullet.set_rotation(bullet_rotation)
-	add_child(new_bullet)
+	new_bullet.set_position(source.global_position)
+	bullet_container_node.add_child(new_bullet)
+	var rotation = new_bullet.get_angle_to(get_global_mouse_position())
+	new_bullet.set_rotation(rotation)
