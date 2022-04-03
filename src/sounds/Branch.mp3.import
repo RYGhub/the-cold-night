@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Branch.mp3-5d37fbfbb6a12f007268561bc5ec7f37.mp3str"
+
+[deps]
+
+source_file="res://src/sounds/Branch.mp3"
+dest_files=[ "res://.import/Branch.mp3-5d37fbfbb6a12f007268561bc5ec7f37.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
