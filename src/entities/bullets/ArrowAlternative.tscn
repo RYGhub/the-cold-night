@@ -24,13 +24,14 @@ texture = ExtResource( 2 )
 [node name="BulletMovement" parent="." index="1"]
 movement_per_second = 400.0
 
-[node name="Flammable" parent="." index="4" instance=ExtResource( 4 )]
-
-[node name="Light" type="Light2D" parent="." index="5"]
+[node name="Light" type="Light2D" parent="." index="4"]
 visible = false
+position = Vector2( 5, 0 )
 texture = ExtResource( 5 )
 texture_scale = 0.02
 color = Color( 1, 0.607843, 0, 1 )
+
+[node name="Flammable" parent="." index="5" instance=ExtResource( 4 )]
 
 [connection signal="caught_fire" from="Flammable" to="." method="_on_Flammable_caught_fire"]
 [connection signal="extinguished_fire" from="Flammable" to="." method="_on_Flammable_extinguished_fire"]
