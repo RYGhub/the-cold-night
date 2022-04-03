@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GrassDirtTileset.png-38d1ac973880621f59371dbd62f46e0a.stex"
+path="res://.import/EnemySnowmanRight.png-3e7f2a8dafa504a24f600bb4b8857d35.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/mechanics/GrassDirtTileset.png"
-dest_files=[ "res://.import/GrassDirtTileset.png-38d1ac973880621f59371dbd62f46e0a.stex" ]
+source_file="res://src/mechanics/EnemySnowmanRight.png"
+dest_files=[ "res://.import/EnemySnowmanRight.png-3e7f2a8dafa504a24f600bb4b8857d35.stex" ]
 
 [params]
 

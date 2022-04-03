@@ -49,7 +49,7 @@ position = Vector2( 500, 438 )
 script = ExtResource( 10 )
 
 [node name="Fire" parent="PhaseOne/PhaseOneContainer" instance=ExtResource( 3 )]
-position = Vector2( 640, 320 )
+position = Vector2( 620, 307 )
 intensity = 0.3
 
 [node name="Pickup" parent="PhaseOne/PhaseOneContainer" instance=ExtResource( 8 )]
