@@ -2,7 +2,7 @@ extends Node
 
 onready var target: KinematicBody2D = get_parent()
 onready var angle: float = deg2rad(target.get_rotation_degrees())
-export var movement_per_second: float = 96.0
+export var movement_per_second: float = 400.0
 
 var direction : Vector2 = Vector2(0,0)
 
