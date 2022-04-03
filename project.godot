@@ -71,6 +71,8 @@ player_shoot={
 
 2d_render/layer_1="Game"
 2d_render/layer_2="UserInterface"
+2d_physics/layer_1="Entities"
+2d_physics/layer_2="Projectiles"
 
 [physics]
 
