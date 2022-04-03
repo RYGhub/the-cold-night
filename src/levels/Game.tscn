@@ -49,7 +49,7 @@ position = Vector2( 596, 268 )
 
 [node name="Fire" parent="PhaseOne/Entities" instance=ExtResource( 3 )]
 position = Vector2( 640, 320 )
-intensity = 2.0
+intensity = 5.0
 
 [node name="Pickups" type="Node" parent="PhaseOne/Entities"]
 
