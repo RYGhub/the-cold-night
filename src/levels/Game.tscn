@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/mechanics/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/mechanics/Darkness.tscn" type="PackedScene" id=2]
@@ -9,7 +9,10 @@
 [ext_resource path="res://src/ui/TimeSurvived.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/entities/Pickup.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/entities/pickupeffects/ChangeFireIntensity.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/music/BaseChoir.mp3" type="AudioStream" id=10]
 [ext_resource path="res://src/levels/PhaseOneMusic.gd" type="Script" id=11]
+[ext_resource path="res://src/music/BaseDrum.mp3" type="AudioStream" id=12]
+[ext_resource path="res://src/music/BaseBell.mp3" type="AudioStream" id=13]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 6 )
@@ -22,14 +25,17 @@ script = ExtResource( 11 )
 fire_path = NodePath("../PhaseOneContainer/Fire")
 
 [node name="Bell" type="AudioStreamPlayer" parent="PhaseOne/PhaseOneMusic"]
+stream = ExtResource( 13 )
 volume_db = -80.0
 autoplay = true
 
 [node name="Choir" type="AudioStreamPlayer" parent="PhaseOne/PhaseOneMusic"]
+stream = ExtResource( 10 )
 volume_db = -80.0
 autoplay = true
 
 [node name="Drum" type="AudioStreamPlayer" parent="PhaseOne/PhaseOneMusic"]
+stream = ExtResource( 12 )
 volume_db = -80.0
 autoplay = true
 
