@@ -23,9 +23,9 @@ func get_cooldown() -> float:
 
 func shoot(target):
 	var node = bullet.instance()
+	container.add_child(node)
 	node.set_position(global_position)
 	node.set_rotation(node.get_angle_to(target))
-	container.add_child(node)
 	node.get_node("Ownership").entity_owner = parent
 	node.add_collision_exception_with(parent)
 	emit_signal("shot")
