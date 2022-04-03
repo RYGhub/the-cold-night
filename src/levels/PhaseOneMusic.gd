@@ -3,7 +3,7 @@ extends Node
 export var fire_path: NodePath
 
 export var choir_min: float = 0.05
-export var choir_max: float = 0.20
+export var choir_max: float = 0.30
 export var bell_min: float = 0.20
 export var bell_max: float = 0.60
 export var drum_min: float = 0.40
