@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/behaviours/spawning/DropLoot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/entities/AbstractEntity.tscn" type="PackedScene" id=2]
+
+[node name="AbstractEnemy" instance=ExtResource( 2 )]
+
+[node name="Alliance" parent="." index="0"]
+alliance = -1
+
+[node name="DropLoot" parent="." index="2" instance=ExtResource( 1 )]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/mechanics/RNG.gd" type="Script" id=1]
+
+[node name="RNG" type="Node"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "Global random number generator that can be accessed by any script at $/Game/RNG."
+}
