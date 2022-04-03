@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/entities/players/AbstractPlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/mechanics/White.png" type="Texture" id=2]
+[ext_resource path="res://src/entities/bullets/ArrowAlternative.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/behaviours/spawning/SpawnOnShoot.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
@@ -13,3 +15,11 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Shape" index="0"]
 texture = ExtResource( 2 )
+
+[node name="Listener" type="Listener2D" parent="." index="1"]
+current = true
+
+[node name="SpawnOnShoot" parent="." index="2" instance=ExtResource( 4 )]
+bullet = ExtResource( 3 )
+cooldown = 0.1
+rapid_fire = true
