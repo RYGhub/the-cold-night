@@ -77,7 +77,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "RandomRotationOnReady",
 "language": "GDScript",
-"path": "res://src/behaviours/RandomRotationOnReady.gd"
+"path": "res://src/behaviours/graphics/RandomRotationOnReady.gd"
 }, {
 "base": "Node",
 "class": "SetSpawnedGoalTo",
