@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://src/mechanics/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/mechanics/Darkness.tscn" type="PackedScene" id=2]
@@ -13,6 +13,19 @@
 [ext_resource path="res://src/music/BaseDrum.mp3" type="AudioStream" id=19]
 [ext_resource path="res://src/music/BaseBell.mp3" type="AudioStream" id=20]
 [ext_resource path="res://src/music/BaseChoir.mp3" type="AudioStream" id=21]
+
+[sub_resource type="CurveTexture" id=4]
+
+[sub_resource type="ParticlesMaterial" id=5]
+emission_shape = 2
+emission_box_extents = Vector3( 720, 1, 1 )
+flag_disable_z = true
+gravity = Vector3( 0, 10, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+tangential_accel_curve = SubResource( 4 )
+scale = 4.0
+scale_random = 1.0
 
 [sub_resource type="DynamicFont" id=1]
 size = 22
@@ -66,6 +79,13 @@ position = Vector2( 640, 320 )
 [node name="Bullets" type="Node" parent="PhaseOne/Entities"]
 
 [node name="Enemies" type="Node" parent="PhaseOne/Entities"]
+
+[node name="Particles2D" type="Particles2D" parent="PhaseOne"]
+position = Vector2( 661, -14 )
+amount = 20000
+lifetime = 20.0
+randomness = 1.0
+process_material = SubResource( 5 )
 
 [node name="UserInterface" type="CanvasLayer" parent="."]
 
