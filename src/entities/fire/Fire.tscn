@@ -44,6 +44,15 @@ shape = SubResource( 1 )
 rotation = -1.5708
 texture = ExtResource( 2 )
 
+[node name="Damageable" parent="Firepit" instance=ExtResource( 5 )]
+max_health = 200.0
+health = 100.0
+
+[node name="Damaging" parent="Firepit" instance=ExtResource( 9 )]
+friendly_fire = true
+
+[node name="DamageEveryTick" parent="Firepit/Damaging" instance=ExtResource( 6 )]
+
 [node name="Flame" type="Area2D" parent="."]
 position = Vector2( 1, 0 )
 collision_layer = 4
@@ -67,14 +76,5 @@ animation = "v1"
 frame = 2
 playing = true
 
-[node name="Damageable" parent="." instance=ExtResource( 5 )]
-max_health = 200.0
-health = 100.0
-
-[node name="Damaging" parent="." instance=ExtResource( 9 )]
-friendly_fire = true
-
-[node name="DamageEveryTick" parent="Damaging" instance=ExtResource( 6 )]
-
+[connection signal="health_changed" from="Firepit/Damageable" to="." method="_on_Damageable_health_changed"]
 [connection signal="body_entered" from="Flame" to="." method="_on_Flame_body_entered"]
-[connection signal="health_changed" from="Damageable" to="." method="_on_Damageable_health_changed"]

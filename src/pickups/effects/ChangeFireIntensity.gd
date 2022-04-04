@@ -5,7 +5,7 @@ class_name ChangeFireIntensity
 export var amount_per_second: float = 0.2
 
 
-onready var target = get_tree().root.find_node("Fire", true, false).get_node("Damageable")
+onready var target = get_tree().root.find_node("Fire", true, false).get_node("Firepit/Damageable")
 onready var pickup: Area2D = get_parent()
 
 

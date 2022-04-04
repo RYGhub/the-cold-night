@@ -49,8 +49,14 @@ script = ExtResource( 7 )
 [node name="Listener" type="Listener2D" parent="." index="1"]
 current = true
 
-[node name="SpawnOnShoot" parent="." index="5" instance=ExtResource( 4 )]
+[node name="Damageable" parent="." index="2"]
+max_health = 50.0
+health = 50.0
+
+[node name="SpawnOnShoot" parent="." index="4" instance=ExtResource( 4 )]
 spawning = ExtResource( 3 )
 container_name = "Bullets"
 
 [node name="ShootOnClick" parent="SpawnOnShoot" index="2" instance=ExtResource( 2 )]
+
+[connection signal="moved_in_direction" from="PlayerMovement" to="Shape/FourSidedSprite" method="_on_PlayerMovement_moved_in_direction"]

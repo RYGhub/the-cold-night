@@ -38,12 +38,6 @@ texture = ExtResource( 2 )
 position = Vector2( 421, -275 )
 scale = Vector2( 4, 4 )
 
-[node name="FlameSprite" parent="TheDarkNightUI/MenuFire/Flame/Shape" index="0"]
-frame = 3
-
-[node name="Damaging" parent="TheDarkNightUI/MenuFire" index="3"]
-damage = -5.0
-
 [node name="Play" type="Button" parent="TheDarkNightUI"]
 anchor_left = 1.0
 anchor_top = 1.0

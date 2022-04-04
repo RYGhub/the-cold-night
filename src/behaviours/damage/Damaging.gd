@@ -15,7 +15,7 @@ onready var parent = get_parent()
 
 func do_damage(to, multiplier):
 	# Check if it is possible to damage the collider
-	var damageable = to.get_node("Damageable")
+	var damageable = to.get_node_or_null("Damageable")
 	if damageable == null:
 		return
 	# Damage the collider!

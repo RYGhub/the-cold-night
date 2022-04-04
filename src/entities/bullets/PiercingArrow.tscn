@@ -8,6 +8,7 @@
 extents = Vector2( 16, 6 )
 
 [node name="Arrow" instance=ExtResource( 3 )]
+scale = Vector2( 2, 2 )
 
 [node name="Shape" type="CollisionShape2D" parent="." index="0"]
 shape = SubResource( 1 )
@@ -20,5 +21,5 @@ texture = ExtResource( 2 )
 [node name="BulletMovement" parent="." index="1"]
 movement_per_second = 200.0
 
-[node name="Damaging" parent="." index="3"]
-destroy_after_damage = false
+[node name="Damaging" parent="." index="2"]
+damage = 50.0

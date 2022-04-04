@@ -35,7 +35,7 @@ func update_state():
 
 
 
-func _on_Fire_intensity_changed(value):
+func _on_Fire_intensity_changed(_origin, value):
 	$Choir.volume_db = (smoothstep(choir_min, choir_max, value) - 1) * 60
 	$Bell.volume_db = (smoothstep(bell_min, bell_max, value) - 1) * 60
 	$Drum.volume_db = (smoothstep(drum_min, drum_max, value) - 1) * 60

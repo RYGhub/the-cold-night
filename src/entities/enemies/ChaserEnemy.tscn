@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/entities/enemies/EnemySnowmanLeft.png" type="Texture" id=1]
 [ext_resource path="res://src/pickups/BranchPickup.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://src/behaviours/graphics/FourSidedSprite.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/entities/enemies/ChaserEnemy.gd" type="Script" id=10]
 [ext_resource path="res://src/behaviours/damage/Damaging.gd" type="Script" id=11]
+[ext_resource path="res://src/pickups/BigArrowPickup.tscn" type="PackedScene" id=12]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 9.0
@@ -50,19 +51,19 @@ shape = SubResource( 1 )
 frames = SubResource( 2 )
 animation = "down"
 
-[node name="Damageable" parent="." index="2"]
+[node name="Damageable" parent="." index="1"]
 max_health = 10.0
 health = 10.0
 
-[node name="DropLoot" parent="." index="3"]
-loot_types = [ ExtResource( 2 ), ExtResource( 5 ) ]
-loot_weights = [ 95.0, 5.0 ]
+[node name="DropLoot" parent="." index="2"]
+loot_types = [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 12 ) ]
+loot_weights = [ 80.0, 10.0, 10.0 ]
 
-[node name="AttractedToMovement" parent="." index="5" instance=ExtResource( 3 )]
+[node name="AttractedToMovement" parent="." index="4" instance=ExtResource( 3 )]
 
-[node name="Damaging" type="Node" parent="." index="6"]
+[node name="Damaging" type="Node" parent="." index="5"]
 script = ExtResource( 11 )
-damage = 20.0
+damage = -10.0
 destroy_after_damage = true
 
 [connection signal="collided" from="AttractedToMovement" to="." method="_on_AttractedToMovement_collided"]

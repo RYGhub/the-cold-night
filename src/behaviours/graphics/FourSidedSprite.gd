@@ -27,3 +27,7 @@ func turn(direction):
 
 func _on_AttractedToMovement_moved_in_direction(_origin, direction):
 	turn(direction)
+
+
+func _on_PlayerMovement_moved_in_direction(_origin, direction):
+	turn(direction)
