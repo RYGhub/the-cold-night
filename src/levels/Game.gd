@@ -14,8 +14,32 @@ func _ready():
 
 
 func _on_MainMenu_Play_pressed():
-	print("Moving to the first phase...")
 	$MainMenu.queue_free()
+	_on_Play_pressed()
+
+
+func _on_Fire_died(_origin, _value):
+	print("Should move to the second phase...")
+	
+	$PhaseOne.queue_free()
+	add_child(bad_ending.instance())
+	# warning-ignore: RETURN_VALUE_DISCARDED
+	$BadEnding/TheDarkNightUI/Play.connect("pressed", self, "_on_BadEnding_Replay_pressed")
+
+func _on_Player_died(_origin, _value):
+	print("Should display a bad end...")
+	
+	$PhaseOne.queue_free()
+	add_child(bad_ending.instance())
+	# warning-ignore: RETURN_VALUE_DISCARDED
+	$BadEnding/TheDarkNightUI/Play.connect("pressed", self, "_on_BadEnding_Replay_pressed")
+
+func _on_BadEnding_Replay_pressed():
+	$BadEnding.queue_free()
+	_on_Play_pressed()
+
+func _on_Play_pressed():
+	print("Moving to the first phase...")
 	add_child(phase_one.instance())
 	add_child(user_interface.instance())
 	# warning-ignore: RETURN_VALUE_DISCARDED
@@ -28,10 +52,3 @@ func _on_MainMenu_Play_pressed():
 	$UserInterface/TheDarkNightUI/MuteButton.connect("toggled", $Music, "_on_MuteButton_toggled")
 	# warning-ignore: RETURN_VALUE_DISCARDED
 	$PhaseOne/Entities/PhaseOnePlayer/Damageable.connect("health_changed", $UserInterface/TheDarkNightUI/HealthBar, "_on_PhaseOnePlayer_health_changed")
-
-
-func _on_Fire_died(_origin, _value):
-	print("Should move to the second phase...")
-
-func _on_Player_died(_origin, _value):
-	print("Should display a bad end...")
