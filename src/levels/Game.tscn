@@ -109,16 +109,6 @@ align = 2
 valign = 1
 script = SubResource( 1 )
 
-[node name="HealthBar" type="ProgressBar" parent="UserInterface/TheDarkNightUI/Panel"]
-visible = false
-anchor_bottom = 1.0
-margin_left = 14.0
-margin_top = 14.0
-margin_right = 320.0
-margin_bottom = -14.0
-grow_vertical = 2
-value = 50.0
-
 [node name="TextureProgress" type="TextureProgress" parent="UserInterface/TheDarkNightUI/Panel"]
 margin_left = 15.0
 margin_top = 15.0
@@ -129,7 +119,7 @@ texture_under = ExtResource( 10 )
 texture_progress = ExtResource( 9 )
 texture_progress_offset = Vector2( 10, 5 )
 
-[node name="Button" type="Button" parent="UserInterface/TheDarkNightUI/Panel"]
+[node name="MuteButton" type="Button" parent="UserInterface/TheDarkNightUI/Panel"]
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -139,8 +129,9 @@ margin_right = -50.0
 margin_bottom = -10.0
 flat = true
 
-[node name="Sprite" type="Sprite" parent="UserInterface/TheDarkNightUI/Panel/Button"]
+[node name="Sprite" type="Sprite" parent="UserInterface/TheDarkNightUI/Panel/MuteButton"]
 position = Vector2( 25, 30 )
 texture = ExtResource( 12 )
 
 [connection signal="intensity_changed" from="PhaseOne/Entities/Fire" to="PhaseOne/Music" method="_on_Fire_intensity_changed"]
+[connection signal="pressed" from="UserInterface/TheDarkNightUI/Panel/MuteButton" to="PhaseOne/Music" method="_on_MuteButton_pressed"]
