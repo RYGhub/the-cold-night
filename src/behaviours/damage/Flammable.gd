@@ -2,8 +2,8 @@ extends Node
 class_name Flammable
 
 
-signal caught_fire
-signal extinguished_fire
+signal caught_fire(origin)
+signal extinguished_fire(origin)
 
 
 var on_fire = false
@@ -11,9 +11,11 @@ var on_fire = false
 
 func catch_fire():
 	if not on_fire:
-		emit_signal("caught_fire")
+		on_fire = true
+		emit_signal("caught_fire", self)
 
 
 func extinguish_fire():
 	if on_fire:
-		emit_signal("extinguished_fire")
+		on_fire = false
+		emit_signal("extinguished_fire", self)

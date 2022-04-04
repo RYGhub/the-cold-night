@@ -2,12 +2,12 @@ extends Node
 class_name Ownership
 
 
-var entity_owner: Node = null
+var entity_owner = null
 
 
-static func get_value(first) -> Node:
-	var first_node = first.get_node("Ownership")
-	var first_eowner = null
-	if first_node != null:
-		first_eowner = first_node.entity_owner
-	return first_eowner
+static func discover(node):
+	var ownership_node = node.get_node("Ownership")
+	if ownership_node != null:
+		return ownership_node.entity_owner
+	else:
+		return null

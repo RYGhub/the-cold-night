@@ -1,57 +1,14 @@
 extends Node2D
+class_name Fire
 
 
-export var intensity: float = 1.0 setget set_intensity
-export var change_per_second: float = - 1.0 / 60.0
-export var min_intensity: float = 0
-export var max_intensity: float = INF
-export var enemy_touch_penalty = 0.1
-
-
-signal intensity_changed(value)
-signal intensity_at_max
-signal intensity_at_min
-var intensity_reached_max_triggered: bool = false
-var intensity_reached_min_triggered: bool = false
-signal intensity_reached_min
-signal intensity_reached_max
-
-
-func set_intensity(value):
-	intensity = clamp(value, min_intensity, max_intensity)
-	# Update everything that needs to be updated when the intensity changes
-	$Flame.scale = Vector2(value, value)
-	# Trigger signals
-	emit_signal("intensity_changed", intensity)
-	# max intensity signal
-	if intensity == max_intensity:
-		emit_signal("intensity_at_max")
-		if not intensity_reached_max_triggered:
-			emit_signal("intensity_reached_max")
-			intensity_reached_max_triggered = true
-	else:
-		intensity_reached_max_triggered = false
-	# min intensity signal
-	if intensity == min_intensity:
-		emit_signal("intensity_at_min")
-		if not intensity_reached_min_triggered:
-			emit_signal("intensity_reached_min")
-			intensity_reached_min_triggered = true
-	else:
-		intensity_reached_min_triggered = false
-
-
-func _process(delta):
-	set_intensity(intensity + (delta * change_per_second))
-
-
-func _on_Flame_body_entered(body: PhysicsBody2D):
+func _on_Flame_body_entered(body):
 	var flammable = body.get_node("Flammable")
 	if flammable != null:
 		flammable.catch_fire()
 
 
-func _on_Enemy_goal_reached(who):
-	intensity -= enemy_touch_penalty
-	# Melt
-	who.queue_free()
+func _on_Damageable_health_changed(origin, value):
+	var scale = smoothstep(origin.min_health, origin.max_health, value) * 2
+	$Flame.scale = Vector2(scale, scale)
+ 

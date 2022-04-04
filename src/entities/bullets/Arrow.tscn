@@ -1,13 +1,22 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/entities/bullets/AbstractBullet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/entities/bullets/Arrow.png" type="Texture" id=2]
-[ext_resource path="res://src/behaviours/spawning/FreeWhenShapeIsOffScreen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/entities/bullets/Arrow.gd" type="Script" id=3]
+[ext_resource path="res://src/behaviours/damage/Flammable.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/mechanics/Light.png" type="Texture" id=5]
+[ext_resource path="res://src/behaviours/spawning/FreeWhenShapeIsOffScreen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/entities/bullets/ArrowFire.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16, 6 )
+extents = Vector2( 6, 1.5 )
 
 [node name="Arrow" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+dim_texture = ExtResource( 2 )
+dim_damage = 1
+lit_texture = ExtResource( 7 )
+lit_damage = 5
 
 [node name="Shape" type="CollisionShape2D" parent="." index="0"]
 shape = SubResource( 1 )
@@ -15,7 +24,19 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="Shape" index="0"]
 texture = ExtResource( 2 )
 
-[node name="FreeWhenShapeIsOffScreen" parent="Shape" index="1" instance=ExtResource( 3 )]
+[node name="FreeWhenShapeIsOffScreen" parent="Shape" index="1" instance=ExtResource( 6 )]
 
 [node name="BulletMovement" parent="." index="1"]
 movement_per_second = 400.0
+
+[node name="Light" type="Light2D" parent="." index="4"]
+visible = false
+position = Vector2( 5, 0 )
+texture = ExtResource( 5 )
+texture_scale = 0.02
+color = Color( 1, 0.607843, 0, 1 )
+
+[node name="Flammable" parent="." index="5" instance=ExtResource( 4 )]
+
+[connection signal="caught_fire" from="Flammable" to="." method="_on_Flammable_caught_fire"]
+[connection signal="extinguished_fire" from="Flammable" to="." method="_on_Flammable_extinguished_fire"]

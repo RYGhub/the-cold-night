@@ -1,25 +1,24 @@
-extends Node2D
+extends Node
+class_name Damageable
 
 
-signal health_changed(value)
-signal dead
+signal health_changed(origin, value)
+signal health_reached_min(origin, value)
+signal health_reached_max(origin, value)
 
 
-export var health: int = 1 setget set_health, get_health
-export var max_health: int = 1
+export(float) var min_health
+export(float) var max_health
+export(float) var health setget set_health
 
 
-onready var parent: Node = get_parent()
+onready var parent = get_parent()
 
 
 func set_health(value):
-	health = value
-	emit_signal("health_changed", value)
-	if health <= 0:
-		emit_signal("dead")
-		# WIP
-		parent.queue_free()
-
-
-func get_health():
-	return health
+	health = clamp(value, min_health, max_health)
+	emit_signal("health_changed", self, value)
+	if is_zero_approx(health - min_health):
+		emit_signal("health_reached_min", self, value)
+	if is_zero_approx(health - max_health):
+		emit_signal("health_reached_max", self, value)

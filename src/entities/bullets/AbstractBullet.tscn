@@ -13,5 +13,4 @@ collision_mask = 2
 [node name="Ownership" parent="." instance=ExtResource( 2 )]
 
 [node name="Damaging" parent="." instance=ExtResource( 3 )]
-
-[connection signal="hit" from="BulletMovement" to="Damaging" method="do_damage_to_collider"]
+destroy_after_damage = true

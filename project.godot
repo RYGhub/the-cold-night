@@ -15,9 +15,9 @@ _global_script_classes=[ {
 "path": "res://src/behaviours/damage/Alliance.gd"
 }, {
 "base": "KinematicBody2D",
-"class": "ArrowAlternative",
+"class": "Arrow",
 "language": "GDScript",
-"path": "res://src/entities/bullets/ArrowAlternative.gd"
+"path": "res://src/entities/bullets/Arrow.gd"
 }, {
 "base": "Node",
 "class": "AttractedToMovement",
@@ -30,6 +30,21 @@ _global_script_classes=[ {
 "path": "res://src/behaviours/movement/BulletMovement.gd"
 }, {
 "base": "Node",
+"class": "ChangeFireIntensity",
+"language": "GDScript",
+"path": "res://src/pickups/effects/ChangeFireIntensity.gd"
+}, {
+"base": "Node",
+"class": "DamageEveryTick",
+"language": "GDScript",
+"path": "res://src/behaviours/damage/DamageEveryTick.gd"
+}, {
+"base": "Node",
+"class": "Damageable",
+"language": "GDScript",
+"path": "res://src/behaviours/damage/Damageable.gd"
+}, {
+"base": "Node",
 "class": "Damaging",
 "language": "GDScript",
 "path": "res://src/behaviours/damage/Damaging.gd"
@@ -39,10 +54,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/behaviours/spawning/DropLoot.gd"
 }, {
-"base": "Node",
-"class": "ErraticMovement",
+"base": "Node2D",
+"class": "Fire",
 "language": "GDScript",
-"path": "res://src/behaviours/movement/ErraticMovement.gd"
+"path": "res://src/entities/fire/Fire.gd"
 }, {
 "base": "Node",
 "class": "Flammable",
@@ -58,6 +73,16 @@ _global_script_classes=[ {
 "class": "FreeWhenShapeIsOffScreen",
 "language": "GDScript",
 "path": "res://src/behaviours/spawning/FreeWhenShapeIsOffScreen.gd"
+}, {
+"base": "Node",
+"class": "Music",
+"language": "GDScript",
+"path": "res://src/levels/Music.gd"
+}, {
+"base": "Button",
+"class": "MuteButton",
+"language": "GDScript",
+"path": "res://src/levels/ui/MuteButton.gd"
 }, {
 "base": "Node",
 "class": "Ownership",
@@ -85,16 +110,26 @@ _global_script_classes=[ {
 "path": "res://src/pickups/effects/RapidFire.gd"
 }, {
 "base": "Node",
-"class": "SetSpawnedGoalTo",
+"class": "SetSpawnedATMGoalTo",
 "language": "GDScript",
-"path": "res://src/behaviours/targeting/SetSpawnedGoalTo.gd"
+"path": "res://src/behaviours/targeting/SetSpawnedATMGoalTo.gd"
 }, {
-"base": "Node2D",
+"base": "Node",
+"class": "ShootOnClick",
+"language": "GDScript",
+"path": "res://src/behaviours/spawning/ShootOnClick.gd"
+}, {
+"base": "Node",
+"class": "ShootWhenPossible",
+"language": "GDScript",
+"path": "res://src/behaviours/spawning/ShootWhenPossible.gd"
+}, {
+"base": "Node",
 "class": "SpawnEveryPeriod",
 "language": "GDScript",
 "path": "res://src/behaviours/spawning/SpawnEveryPeriod.gd"
 }, {
-"base": "Node2D",
+"base": "Node",
 "class": "SpawnOnShoot",
 "language": "GDScript",
 "path": "res://src/behaviours/spawning/SpawnOnShoot.gd"
@@ -108,34 +143,48 @@ _global_script_classes=[ {
 "class": "TeleportToScreenEdge",
 "language": "GDScript",
 "path": "res://src/behaviours/movement/TeleportToRandomPosition.gd"
+}, {
+"base": "Reference",
+"class": "Utils",
+"language": "GDScript",
+"path": "res://src/Utils.gd"
 } ]
 _global_script_class_icons={
 "Alliance": "",
-"ArrowAlternative": "",
+"Arrow": "",
 "AttractedToMovement": "",
 "BulletMovement": "",
+"ChangeFireIntensity": "",
+"DamageEveryTick": "",
+"Damageable": "",
 "Damaging": "",
 "DropLoot": "",
-"ErraticMovement": "",
+"Fire": "",
 "Flammable": "",
 "FourSidedSprite": "",
 "FreeWhenShapeIsOffScreen": "",
+"Music": "",
+"MuteButton": "",
 "Ownership": "",
 "PlayerMovement": "",
 "RNG": "",
 "RandomRotationOnReady": "",
 "RapidFire": "",
-"SetSpawnedGoalTo": "",
+"SetSpawnedATMGoalTo": "",
+"ShootOnClick": "",
+"ShootWhenPossible": "",
 "SpawnEveryPeriod": "",
 "SpawnOnShoot": "",
 "TeleportToRandomPosition": "",
-"TeleportToScreenEdge": ""
+"TeleportToScreenEdge": "",
+"Utils": ""
 }
 
 [application]
 
-config/name="LD50"
-run/main_scene="res://src/levels/MainMenu.tscn"
+config/name="The Cold Night"
+run/main_scene="res://src/levels/Game.tscn"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 
 [audio]
 

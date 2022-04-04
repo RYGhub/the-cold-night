@@ -2,10 +2,10 @@ extends Node
 class_name TeleportToRandomPosition
 
 
-signal teleported(to)
+signal teleported(origin)
 
 
-export var bounds: Vector2
+export(Vector2) var bounds
 
 
 onready var parent = get_parent()
@@ -30,8 +30,8 @@ func teleport():
 		new_position = Vector2(rng.randf_range(0, bounds.x), bounds.y)
 	
 	parent.set_position(new_position)
-	emit_signal("teleported", parent.position)
+	emit_signal("teleported", self)
 
 
-func _handle_spawned(_node):
+func _on_SpawnEveryPeriod_spawned(_origin, _node):
 	teleport()

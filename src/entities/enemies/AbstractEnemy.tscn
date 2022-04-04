@@ -9,5 +9,4 @@
 alliance = -1
 
 [node name="DropLoot" parent="." index="2" instance=ExtResource( 1 )]
-
-[connection signal="dead" from="Damageable" to="DropLoot" method="create_drop"]
+container_name = "Pickups"

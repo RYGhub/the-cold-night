@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://src/behaviours/movement/ErraticMovement.gd" type="Script" id=1]
-
-[node name="ErraticMovement" type="Node"]
-script = ExtResource( 1 )
-movement_per_second = 16.0

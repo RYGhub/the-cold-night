@@ -7,5 +7,4 @@ script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": "Allows the object to damage Damageable nodes."
 }
-damage = 1
-destroy_on_damage = true
+damage = -1.0

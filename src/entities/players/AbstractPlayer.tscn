@@ -5,4 +5,7 @@
 
 [node name="AbstractPlayer" instance=ExtResource( 3 )]
 
+[node name="Alliance" parent="." index="0"]
+alliance = 1
+
 [node name="PlayerMovement" parent="." index="2" instance=ExtResource( 2 )]
