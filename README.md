@@ -1,10 +1,10 @@
-# _The Cold Night_
+# The Cold Night
 
 _Keep the campfire lit to stop something terrible from awakening!_
 
 ![A campfire](media/OpenGraph.png)
 
-## Ludum Dare 50: _category_ entry
+## Ludum Dare 50: Jam entry
 
 [![Overall: TBD](https://img.shields.io/badge/overall-TBD-lightgrey) 
 ![Fun: TBD](https://img.shields.io/badge/fun-TBD-lightgrey) 
@@ -19,7 +19,10 @@ _Keep the campfire lit to stop something terrible from awakening!_
 
 ### Game
 
-- Your name goes here!
+- [@Steffo99](https://github.com/Steffo99)
+- [@MaximLobovsky](https://github.com/MaximLobovsky)
+- [@Cookie-CHR](https://github.com/Cookie-CHR)
+- [@xZef23](https://github.com/xZef23)
 
 ### Tools
 
