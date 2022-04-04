@@ -45,3 +45,7 @@ func create_drop():
 	container.add_child(node)
 	node.set_position(source.global_position)
 	return node
+
+
+func _on_Damageable_health_reached_min(_origin, _value):
+	create_drop()

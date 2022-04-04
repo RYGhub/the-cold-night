@@ -8,7 +8,7 @@ const DOWN_RIGHT = TAU/8
 const DOWN_LEFT = 3*TAU/8
 
 
-func turn(direction: Vector2) -> String:
+func turn(direction):
 	var angle = direction.angle()
 	var anime
 
@@ -23,3 +23,7 @@ func turn(direction: Vector2) -> String:
 	
 	play(anime)
 	return animation
+
+
+func _on_AttractedToMovement_moved_in_direction(_origin, direction):
+	turn(direction)

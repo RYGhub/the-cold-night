@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/behaviours/spawning/DropLoot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/entities/AbstractEntity.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/behaviours/damage/FreeOnRequest.tscn" type="PackedScene" id=3]
 
 [node name="AbstractEnemy" instance=ExtResource( 2 )]
 
@@ -10,3 +11,8 @@ alliance = -1
 
 [node name="DropLoot" parent="." index="2" instance=ExtResource( 1 )]
 container_name = "Pickups"
+
+[node name="FreeOnRequest" parent="." index="3" instance=ExtResource( 3 )]
+
+[connection signal="health_reached_min" from="Damageable" to="DropLoot" method="_on_Damageable_health_reached_min"]
+[connection signal="health_reached_min" from="Damageable" to="FreeOnRequest" method="_on_Damageable_health_reached_min"]

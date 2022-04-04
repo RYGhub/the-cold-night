@@ -46,8 +46,14 @@ shape = SubResource( 1 )
 frames = SubResource( 2 )
 animation = "down"
 
+[node name="Damageable" parent="." index="2"]
+max_health = 10.0
+health = 10.0
+
 [node name="DropLoot" parent="." index="3"]
 loot_types = [ null, ExtResource( 2 ), ExtResource( 5 ) ]
 loot_weights = [ 1.0, 1.0, 0.1 ]
 
-[node name="AttractedToMovement" parent="." index="4" instance=ExtResource( 3 )]
+[node name="AttractedToMovement" parent="." index="5" instance=ExtResource( 3 )]
+
+[connection signal="moved_in_direction" from="AttractedToMovement" to="Shape/FourSidedSprite" method="_on_AttractedToMovement_moved_in_direction"]

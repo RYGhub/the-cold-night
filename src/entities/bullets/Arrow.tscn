@@ -14,9 +14,9 @@ extents = Vector2( 6, 1.5 )
 [node name="Arrow" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 dim_texture = ExtResource( 2 )
-dim_damage = 1
+dim_damage = -10
 lit_texture = ExtResource( 7 )
-lit_damage = 5
+lit_damage = -10
 
 [node name="Shape" type="CollisionShape2D" parent="." index="0"]
 shape = SubResource( 1 )

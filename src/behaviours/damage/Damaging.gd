@@ -31,4 +31,11 @@ func do_damage(to, multiplier):
 	damageable.health += damage * multiplier
 	# Emit the signal
 	emit_signal("damaged", self, to)
+	# Destroy self if necessary
+	if destroy_after_damage:
+		parent.queue_free()
 
+
+
+func _on_BulletMovement_collided(_origin, collision):
+	do_damage(collision.collider, 1)

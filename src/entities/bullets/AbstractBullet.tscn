@@ -14,3 +14,5 @@ collision_mask = 2
 
 [node name="Damaging" parent="." instance=ExtResource( 3 )]
 destroy_after_damage = true
+
+[connection signal="collided" from="BulletMovement" to="Damaging" method="_on_BulletMovement_collided"]

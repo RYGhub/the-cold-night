@@ -32,5 +32,5 @@ func _on_body_entered(_other):
 
 func set_active(value):
 	active = value
-	$Shape.visible = value
-	$Shape.disabled = not value
+	$Shape.set_deferred("visible", value)
+	$Shape.set_deferred("disabled", not value)

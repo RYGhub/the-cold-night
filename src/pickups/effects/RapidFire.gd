@@ -2,7 +2,7 @@ extends Node
 class_name RapidFire
 
 
-onready var target = get_tree().root.find_node("PhaseOnePlayer", true, false).get_node("ShootOnClick")
+onready var target = get_tree().root.find_node("PhaseOnePlayer", true, false).get_node("SpawnOnShoot/ShootOnClick")
 onready var pickup: Area2D = get_parent()
 
 
