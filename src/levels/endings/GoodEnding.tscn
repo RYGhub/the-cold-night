@@ -84,7 +84,7 @@ margin_top = 300.0
 position = Vector2( 421, -275 )
 scale = Vector2( 4, 4 )
 
-[node name="Damaging" parent="TheDarkNightUI/MenuFire" index="3"]
-damage = -5.0
+[node name="FlameSprite" parent="TheDarkNightUI/MenuFire/Flame/Shape" index="0"]
+frame = 0
 
 [editable path="TheDarkNightUI/MenuFire"]
