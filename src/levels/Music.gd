@@ -2,12 +2,12 @@ extends Node
 class_name Music
 
 
-export var choir_min: float = 0.05
-export var choir_max: float = 0.30
-export var bell_min: float = 0.20
-export var bell_max: float = 0.60
-export var drum_min: float = 0.40
-export var drum_max: float = 0.80
+export var choir_min: float = 10
+export var choir_max: float = 60
+export var bell_min: float = 40
+export var bell_max: float = 100
+export var drum_min: float = 100
+export var drum_max: float = 160
 export var muted: bool setget set_mute, get_mute
 
 

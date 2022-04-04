@@ -17,4 +17,3 @@ func _on_picked_up():
 func _on_expired():
 	target_click.rapid_fire_instances -= 1
 	target_cooldown.wait_time *= 2
-
