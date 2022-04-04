@@ -21,7 +21,7 @@ func _on_Despawn_timeout():
 
 
 func pick_up():
-	active = false
+	set_active(false)
 	$Duration.start()
 	emit_signal("picked_up")
 
