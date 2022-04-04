@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/mechanics/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/mechanics/Darkness.tscn" type="PackedScene" id=2]
@@ -6,20 +6,29 @@
 [ext_resource path="res://src/entities/players/PhaseOnePlayer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/mechanics/RNG.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/levels/Game.gd" type="Script" id=6]
-[ext_resource path="res://src/ui/TimeSurvived.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/ui/fonts/SourceSerifPro-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://src/ui/TheDarkNightUI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/levels/PhaseOneMusic.gd" type="Script" id=11]
-[ext_resource path="res://src/ui/HealthBar.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/music/BaseDrum.mp3" type="AudioStream" id=19]
 [ext_resource path="res://src/music/BaseBell.mp3" type="AudioStream" id=20]
 [ext_resource path="res://src/music/BaseChoir.mp3" type="AudioStream" id=21]
 
-[sub_resource type="DynamicFont" id=1]
-size = 22
-font_data = ExtResource( 8 )
+[sub_resource type="GDScript" id=1]
+script/source = "extends Label
 
-[sub_resource type="Theme" id=2]
-default_font = SubResource( 1 )
+
+func _ready():
+	var game = get_tree().root.get_node(\"Game\")
+	game.connect(\"survival_seconds_updated\", self, \"_on_survival_seconds_updated\")
+
+
+func _on_survival_seconds_updated(value: float):
+	# warning-ignore:NARROWING_CONVERSION
+	var minutes: int = floor(value / 60)
+	var seconds_and_millis: float = value - minutes * 60
+	var seconds: int = int(seconds_and_millis)
+	var millis: int = int((seconds_and_millis - seconds) * 1000)
+	text = \"%02d:%02d.%03d\" % ([minutes, seconds, millis])
+"
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 6 )
@@ -69,24 +78,37 @@ position = Vector2( 640, 320 )
 
 [node name="UserInterface" type="CanvasLayer" parent="."]
 
-[node name="UserIntefaceContainer" type="Panel" parent="UserInterface"]
-light_mask = 2
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+[node name="TheDarkNightUI" parent="UserInterface" instance=ExtResource( 8 )]
+anchor_left = 0.0
+anchor_right = 1.0
+margin_left = 0.0
+margin_right = 0.0
+
+[node name="Panel" type="Panel" parent="UserInterface/TheDarkNightUI"]
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -640.0
-margin_top = -80.0
-margin_right = 640.0
-theme = SubResource( 2 )
 
-[node name="TimeSurvived" parent="UserInterface/UserIntefaceContainer" instance=ExtResource( 7 )]
-margin_left = -45.5
-margin_top = -14.5
-margin_right = 45.5
-margin_bottom = 14.5
+[node name="TimeSurvived" type="Label" parent="UserInterface/TheDarkNightUI/Panel"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 14.0
+margin_right = -14.0
+margin_bottom = -14.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "00:00.000"
+align = 2
+valign = 1
+script = SubResource( 1 )
 
-[node name="HealthBar" parent="UserInterface/UserIntefaceContainer" instance=ExtResource( 14 )]
+[node name="HealthBar" type="ProgressBar" parent="UserInterface/TheDarkNightUI/Panel"]
+anchor_bottom = 1.0
 margin_left = 14.0
+margin_top = 14.0
+margin_right = 320.0
+margin_bottom = -14.0
+grow_vertical = 2
+value = 50.0
 
 [connection signal="intensity_changed" from="PhaseOne/Entities/Fire" to="PhaseOne/Music" method="_on_Fire_intensity_changed"]
