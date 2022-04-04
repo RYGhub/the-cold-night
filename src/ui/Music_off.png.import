@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EnemySpider.png-c95784f88ad7e56ff4e9578701ea7904.stex"
+path="res://.import/Music_off.png-27b13d35b03a178cf5a3bbf66101607e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/mechanics/EnemySpider.png"
-dest_files=[ "res://.import/EnemySpider.png-c95784f88ad7e56ff4e9578701ea7904.stex" ]
+source_file="res://src/ui/Music_off.png"
+dest_files=[ "res://.import/Music_off.png-27b13d35b03a178cf5a3bbf66101607e.stex" ]
 
 [params]
 

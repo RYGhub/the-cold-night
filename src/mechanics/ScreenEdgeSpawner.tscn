@@ -7,4 +7,5 @@
 
 [node name="TeleportToScreenEdge" parent="." index="1" instance=ExtResource( 2 )]
 
+[connection signal="spawned" from="." to="TeleportToScreenEdge" method="_handle_spawned"]
 [connection signal="timeout" from="Period" to="TeleportToScreenEdge" method="teleport"]

@@ -5,6 +5,8 @@ export var intensity: float = 1.0 setget set_intensity
 export var change_per_second: float = - 1.0 / 60.0
 export var min_intensity: float = 0
 export var max_intensity: float = INF
+export var enemy_touch_penalty = 0.1
+
 
 signal intensity_changed(value)
 signal intensity_at_max
@@ -47,3 +49,9 @@ func _on_Flame_body_entered(body: PhysicsBody2D):
 	var flammable = body.get_node("Flammable")
 	if flammable != null:
 		flammable.catch_fire()
+
+
+func _on_Enemy_goal_reached(who):
+	intensity -= enemy_touch_penalty
+	# Melt
+	who.queue_free()

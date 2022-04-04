@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EnemySpider.png-c95784f88ad7e56ff4e9578701ea7904.stex"
+path="res://.import/UIBar.png-1a0464279903795260a97a88d660c35b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/mechanics/EnemySpider.png"
-dest_files=[ "res://.import/EnemySpider.png-c95784f88ad7e56ff4e9578701ea7904.stex" ]
+source_file="res://src/ui/UIBar.png"
+dest_files=[ "res://.import/UIBar.png-1a0464279903795260a97a88d660c35b.stex" ]
 
 [params]
 
