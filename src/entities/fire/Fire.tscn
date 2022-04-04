@@ -41,7 +41,6 @@ animations = [ {
 
 [node name="Fire" type="Node2D"]
 script = ExtResource( 3 )
-intensity = 1.0
 
 [node name="Firepit" type="StaticBody2D" parent="."]
 
@@ -71,7 +70,7 @@ material = SubResource( 2 )
 z_index = 1
 frames = SubResource( 4 )
 animation = "v1"
-frame = 5
+frame = 4
 playing = true
 
 [connection signal="body_entered" from="Flame" to="." method="_on_Flame_body_entered"]

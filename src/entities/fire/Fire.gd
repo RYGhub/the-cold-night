@@ -1,7 +1,7 @@
 extends Node2D
 
 
-export var intensity: float = 0.5 setget set_intensity
+export var intensity: float = 1.0 setget set_intensity
 export var change_per_second: float = - 1.0 / 60.0
 export var min_intensity: float = 0
 export var max_intensity: float = INF
