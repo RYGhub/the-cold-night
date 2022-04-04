@@ -129,7 +129,7 @@ _global_script_class_icons={
 [application]
 
 config/name="LD50"
-run/main_scene="res://src/levels/Game.tscn"
+run/main_scene="res://src/levels/MainMenu.tscn"
 
 [audio]
 

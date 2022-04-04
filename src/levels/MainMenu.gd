@@ -1,16 +1,11 @@
 extends Node2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+func _ready():	
+	for child in get_children():
+		if child.name == "Play":
+			get_node(child.name).connect("pressed", self, "change_scn")
 
+func change_scn():
+	get_tree().change_scene("res://src/levels/Game.tscn")
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
