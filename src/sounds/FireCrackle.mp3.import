@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/FireCrackle.mp3-6c3841eacf77f749f5209b7b948241aa.mp3str"
+
+[deps]
+
+source_file="res://src/sounds/FireCrackle.mp3"
+dest_files=[ "res://.import/FireCrackle.mp3-6c3841eacf77f749f5209b7b948241aa.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
