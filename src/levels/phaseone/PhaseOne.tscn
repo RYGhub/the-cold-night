@@ -1,6 +1,5 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://src/pickups/BranchPickup.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/mechanics/GrassDirtTileset.png" type="Texture" id=2]
 [ext_resource path="res://src/entities/fire/Fire.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/behaviours/spawning/SpawnEveryPeriod.tscn" type="PackedScene" id=4]
@@ -86,6 +85,9 @@ position = Vector2( 640, 319 )
 spawning = ExtResource( 5 )
 container_name = "Enemies"
 
+[node name="Period" parent="Entities/Containers/Enemies/TowardsFireSpawner/SpawnEveryPeriod" index="0"]
+wait_time = 2.0
+
 [node name="DecreaseEvery" parent="Entities/Containers/Enemies/TowardsFireSpawner/SpawnEveryPeriod/Period" index="0" instance=ExtResource( 8 )]
 multiplier = 0.5
 
@@ -95,15 +97,48 @@ goal_path = NodePath("../../../../../Fire")
 [node name="TeleportToScreenEdge" parent="Entities/Containers/Enemies/TowardsFireSpawner" instance=ExtResource( 6 )]
 bounds = Vector2( 1280, 640 )
 
+[node name="TowardsFireSpawner2" type="Node2D" parent="Entities/Containers/Enemies"]
+
+[node name="SpawnEveryPeriod" parent="Entities/Containers/Enemies/TowardsFireSpawner2" instance=ExtResource( 4 )]
+spawning = ExtResource( 5 )
+container_name = "Enemies"
+
+[node name="Period" parent="Entities/Containers/Enemies/TowardsFireSpawner2/SpawnEveryPeriod" index="0"]
+wait_time = 2.0
+
+[node name="DecreaseEvery" parent="Entities/Containers/Enemies/TowardsFireSpawner2/SpawnEveryPeriod/Period" index="0" instance=ExtResource( 8 )]
+multiplier = 0.5
+
+[node name="SetSpawnedGoalTo" parent="Entities/Containers/Enemies/TowardsFireSpawner2/SpawnEveryPeriod" instance=ExtResource( 11 )]
+goal_path = NodePath("../../../../../Fire")
+
+[node name="TeleportToScreenEdge" parent="Entities/Containers/Enemies/TowardsFireSpawner2" instance=ExtResource( 6 )]
+bounds = Vector2( 1280, 640 )
+
+[node name="TowardsFireSpawner3" type="Node2D" parent="Entities/Containers/Enemies"]
+
+[node name="SpawnEveryPeriod" parent="Entities/Containers/Enemies/TowardsFireSpawner3" instance=ExtResource( 4 )]
+spawning = ExtResource( 5 )
+container_name = "Enemies"
+
+[node name="Period" parent="Entities/Containers/Enemies/TowardsFireSpawner3/SpawnEveryPeriod" index="0"]
+wait_time = 2.0
+
+[node name="DecreaseEvery" parent="Entities/Containers/Enemies/TowardsFireSpawner3/SpawnEveryPeriod/Period" index="0" instance=ExtResource( 8 )]
+multiplier = 0.5
+
+[node name="SetSpawnedGoalTo" parent="Entities/Containers/Enemies/TowardsFireSpawner3/SpawnEveryPeriod" instance=ExtResource( 11 )]
+goal_path = NodePath("../../../../../Fire")
+
+[node name="TeleportToScreenEdge" parent="Entities/Containers/Enemies/TowardsFireSpawner3" instance=ExtResource( 6 )]
+bounds = Vector2( 1280, 640 )
+
 [node name="TowardsPlayerSpawner" type="Node2D" parent="Entities/Containers/Enemies"]
 position = Vector2( 1280, 640 )
 
 [node name="SpawnEveryPeriod" parent="Entities/Containers/Enemies/TowardsPlayerSpawner" instance=ExtResource( 4 )]
 spawning = ExtResource( 5 )
 container_name = "Enemies"
-
-[node name="Period" parent="Entities/Containers/Enemies/TowardsPlayerSpawner/SpawnEveryPeriod" index="0"]
-wait_time = 1.5
 
 [node name="DecreaseEvery" parent="Entities/Containers/Enemies/TowardsPlayerSpawner/SpawnEveryPeriod/Period" index="0" instance=ExtResource( 8 )]
 multiplier = 0.5
@@ -116,100 +151,16 @@ bounds = Vector2( 1280, 640 )
 
 [node name="Pickups" type="Node" parent="Entities/Containers"]
 
-[node name="BranchPickup" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 593, 376 )
-
-[node name="BranchPickup2" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 681, 368 )
-
-[node name="BranchPickup6" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 721, 341 )
-
-[node name="BranchPickup7" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 712, 371 )
-
-[node name="BranchPickup8" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 703, 290 )
-
-[node name="BranchPickup9" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 702, 319 )
-
-[node name="BranchPickup10" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 702, 319 )
-
-[node name="BranchPickup11" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 745, 302 )
-
-[node name="BranchPickup12" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 704, 262 )
-
-[node name="BranchPickup13" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 660, 251 )
-
-[node name="BranchPickup14" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 688, 230 )
-
-[node name="BranchPickup15" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 627, 211 )
-
-[node name="BranchPickup16" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 627, 232 )
-
-[node name="BranchPickup20" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 559, 283 )
-
-[node name="BranchPickup21" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 554, 316 )
-
-[node name="BranchPickup22" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 577, 352 )
-
-[node name="BranchPickup23" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 557, 374 )
-
-[node name="BranchPickup24" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 614, 363 )
-
-[node name="BranchPickup25" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 649, 373 )
-
-[node name="BranchPickup26" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 671, 397 )
-
-[node name="BranchPickup27" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 608, 410 )
-
-[node name="BranchPickup28" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 713, 397 )
-
-[node name="BranchPickup29" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 750, 364 )
-
-[node name="BranchPickup30" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 738, 275 )
-
-[node name="BranchPickup17" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 582, 239 )
-
-[node name="BranchPickup18" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 582, 239 )
-
-[node name="BranchPickup19" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 588, 316 )
-
-[node name="BranchPickup3" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 641, 398 )
-
-[node name="BranchPickup4" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 354, 309 )
-
-[node name="BranchPickup5" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
-position = Vector2( 642, 104 )
-
 [connection signal="spawned" from="Entities/Containers/Enemies/TowardsFireSpawner/SpawnEveryPeriod" to="Entities/Containers/Enemies/TowardsFireSpawner/SpawnEveryPeriod/SetSpawnedGoalTo" method="_on_SpawnEveryPeriod_spawned"]
 [connection signal="spawned" from="Entities/Containers/Enemies/TowardsFireSpawner/SpawnEveryPeriod" to="Entities/Containers/Enemies/TowardsFireSpawner/TeleportToScreenEdge" method="_on_SpawnEveryPeriod_spawned"]
+[connection signal="spawned" from="Entities/Containers/Enemies/TowardsFireSpawner2/SpawnEveryPeriod" to="Entities/Containers/Enemies/TowardsFireSpawner2/SpawnEveryPeriod/SetSpawnedGoalTo" method="_on_SpawnEveryPeriod_spawned"]
+[connection signal="spawned" from="Entities/Containers/Enemies/TowardsFireSpawner2/SpawnEveryPeriod" to="Entities/Containers/Enemies/TowardsFireSpawner2/TeleportToScreenEdge" method="_on_SpawnEveryPeriod_spawned"]
+[connection signal="spawned" from="Entities/Containers/Enemies/TowardsFireSpawner3/SpawnEveryPeriod" to="Entities/Containers/Enemies/TowardsFireSpawner3/SpawnEveryPeriod/SetSpawnedGoalTo" method="_on_SpawnEveryPeriod_spawned"]
+[connection signal="spawned" from="Entities/Containers/Enemies/TowardsFireSpawner3/SpawnEveryPeriod" to="Entities/Containers/Enemies/TowardsFireSpawner3/TeleportToScreenEdge" method="_on_SpawnEveryPeriod_spawned"]
 [connection signal="spawned" from="Entities/Containers/Enemies/TowardsPlayerSpawner/SpawnEveryPeriod" to="Entities/Containers/Enemies/TowardsPlayerSpawner/SpawnEveryPeriod/SetSpawnedGoalTo" method="_on_SpawnEveryPeriod_spawned"]
 [connection signal="spawned" from="Entities/Containers/Enemies/TowardsPlayerSpawner/SpawnEveryPeriod" to="Entities/Containers/Enemies/TowardsPlayerSpawner/TeleportToScreenEdge" method="_on_SpawnEveryPeriod_spawned"]
 
 [editable path="Entities/Containers/Enemies/TowardsFireSpawner/SpawnEveryPeriod"]
+[editable path="Entities/Containers/Enemies/TowardsFireSpawner2/SpawnEveryPeriod"]
+[editable path="Entities/Containers/Enemies/TowardsFireSpawner3/SpawnEveryPeriod"]
 [editable path="Entities/Containers/Enemies/TowardsPlayerSpawner/SpawnEveryPeriod"]

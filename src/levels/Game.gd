@@ -26,7 +26,12 @@ func _on_MainMenu_Play_pressed():
 	$PhaseOne/Entities/Fire/Firepit/Damageable.connect("health_reached_min", self, "_on_Fire_died")
 	# warning-ignore: RETURN_VALUE_DISCARDED
 	$UserInterface/TheDarkNightUI/MuteButton.connect("toggled", $Music, "_on_MuteButton_toggled")
+	# warning-ignore: RETURN_VALUE_DISCARDED
+	$PhaseOne/Entities/PhaseOnePlayer/Damageable.connect("health_changed", $UserInterface/TheDarkNightUI/HealthBar, "_on_PhaseOnePlayer_health_changed")
 
 
 func _on_Fire_died(_origin, _value):
 	print("Should move to the second phase...")
+
+func _on_Player_died(_origin, _value):
+	print("Should display a bad end...")
