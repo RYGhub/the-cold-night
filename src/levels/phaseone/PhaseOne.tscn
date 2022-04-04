@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
+[ext_resource path="res://src/pickups/BranchPickup.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/mechanics/GrassDirtTileset.png" type="Texture" id=2]
 [ext_resource path="res://src/entities/fire/Fire.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/behaviours/spawning/SpawnEveryPeriod.tscn" type="PackedScene" id=4]
@@ -151,6 +152,46 @@ bounds = Vector2( 1280, 640 )
 
 [node name="Pickups" type="Node" parent="Entities/Containers"]
 
+[node name="BranchPickup" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
+position = Vector2( 594, 322 )
+scale = Vector2( 1, 1 )
+
+[node name="Despawn" parent="Entities/Containers/Pickups/BranchPickup" index="2"]
+autostart = false
+
+[node name="ChangeFireIntensity" parent="Entities/Containers/Pickups/BranchPickup" index="3"]
+amount_per_second = 30.0
+
+[node name="BranchPickup2" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
+position = Vector2( 675, 417 )
+scale = Vector2( 1, 1 )
+
+[node name="Despawn" parent="Entities/Containers/Pickups/BranchPickup2" index="2"]
+autostart = false
+
+[node name="ChangeFireIntensity" parent="Entities/Containers/Pickups/BranchPickup2" index="3"]
+amount_per_second = 30.0
+
+[node name="BranchPickup3" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
+position = Vector2( 742, 115 )
+scale = Vector2( 1, 1 )
+
+[node name="Despawn" parent="Entities/Containers/Pickups/BranchPickup3" index="2"]
+autostart = false
+
+[node name="ChangeFireIntensity" parent="Entities/Containers/Pickups/BranchPickup3" index="3"]
+amount_per_second = 30.0
+
+[node name="BranchPickup4" parent="Entities/Containers/Pickups" instance=ExtResource( 1 )]
+position = Vector2( 325, 135 )
+scale = Vector2( 1, 1 )
+
+[node name="Despawn" parent="Entities/Containers/Pickups/BranchPickup4" index="2"]
+autostart = false
+
+[node name="ChangeFireIntensity" parent="Entities/Containers/Pickups/BranchPickup4" index="3"]
+amount_per_second = 30.0
+
 [connection signal="spawned" from="Entities/Containers/Enemies/TowardsFireSpawner/SpawnEveryPeriod" to="Entities/Containers/Enemies/TowardsFireSpawner/SpawnEveryPeriod/SetSpawnedGoalTo" method="_on_SpawnEveryPeriod_spawned"]
 [connection signal="spawned" from="Entities/Containers/Enemies/TowardsFireSpawner/SpawnEveryPeriod" to="Entities/Containers/Enemies/TowardsFireSpawner/TeleportToScreenEdge" method="_on_SpawnEveryPeriod_spawned"]
 [connection signal="spawned" from="Entities/Containers/Enemies/TowardsFireSpawner2/SpawnEveryPeriod" to="Entities/Containers/Enemies/TowardsFireSpawner2/SpawnEveryPeriod/SetSpawnedGoalTo" method="_on_SpawnEveryPeriod_spawned"]
@@ -164,3 +205,7 @@ bounds = Vector2( 1280, 640 )
 [editable path="Entities/Containers/Enemies/TowardsFireSpawner2/SpawnEveryPeriod"]
 [editable path="Entities/Containers/Enemies/TowardsFireSpawner3/SpawnEveryPeriod"]
 [editable path="Entities/Containers/Enemies/TowardsPlayerSpawner/SpawnEveryPeriod"]
+[editable path="Entities/Containers/Pickups/BranchPickup"]
+[editable path="Entities/Containers/Pickups/BranchPickup2"]
+[editable path="Entities/Containers/Pickups/BranchPickup3"]
+[editable path="Entities/Containers/Pickups/BranchPickup4"]
