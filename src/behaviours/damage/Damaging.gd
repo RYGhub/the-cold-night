@@ -7,7 +7,6 @@ signal damaged(origin, damaged)
 
 export(float) var damage
 export(bool) var destroy_after_damage
-export(bool) var friendly_fire
 
 
 onready var parent = get_parent()
