@@ -2,6 +2,9 @@ extends Node
 class_name PlayerMovement
 
 
+signal moving_in_direction(direction)
+
+
 export var movement_per_second: float
 
 
@@ -19,4 +22,5 @@ func _physics_process(_delta):
 	if direction.length() > 1:
 		direction.normalized()
 
+	emit_signal("moving_in_direction", direction)
 	var _motion: Vector2 = parent.move_and_slide(direction * movement_per_second, Vector2.ZERO)

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CharacterFrontLeft.png-a3042b9811da49120539c1fc0f371a48.stex"
+path="res://.import/CharacterFrontLeft.png-114f9621beadf66601a533677fac5ae7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/mechanics/CharacterFrontLeft.png"
-dest_files=[ "res://.import/CharacterFrontLeft.png-a3042b9811da49120539c1fc0f371a48.stex" ]
+source_file="res://src/entities/players/CharacterFrontLeft.png"
+dest_files=[ "res://.import/CharacterFrontLeft.png-114f9621beadf66601a533677fac5ae7.stex" ]
 
 [params]
 
