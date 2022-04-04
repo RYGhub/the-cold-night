@@ -143,6 +143,10 @@ anchor_bottom = 1.0
 position = Vector2( 640, 40 )
 texture = ExtResource( 7 )
 
+[node name="TimerBG" type="Sprite" parent="UserInterface/TheDarkNightUI/Panel"]
+position = Vector2( 630, 40 )
+texture = ExtResource( 10 )
+
 [node name="TimeSurvived" type="Label" parent="UserInterface/TheDarkNightUI/Panel"]
 anchor_bottom = 1.0
 margin_left = 600.0
@@ -164,7 +168,7 @@ margin_bottom = -15.0
 value = 50.0
 texture_under = ExtResource( 10 )
 texture_progress = ExtResource( 9 )
-texture_progress_offset = Vector2( 10, 5 )
+texture_progress_offset = Vector2( 2, 0 )
 
 [node name="MuteButton" type="Button" parent="UserInterface/TheDarkNightUI/Panel"]
 anchor_left = 1.0
@@ -174,11 +178,8 @@ margin_left = -100.0
 margin_top = 10.0
 margin_right = -50.0
 margin_bottom = -10.0
+icon = ExtResource( 12 )
 flat = true
-
-[node name="Sprite" type="Sprite" parent="UserInterface/TheDarkNightUI/Panel/MuteButton"]
-position = Vector2( 25, 30 )
-texture = ExtResource( 12 )
 
 [connection signal="intensity_changed" from="PhaseOne/Entities/Fire" to="PhaseOne/Music" method="_on_Fire_intensity_changed"]
 [connection signal="intensity_reached_min" from="PhaseOne/Entities/Fire" to="." method="_on_Fire_intensity_reached_min"]
