@@ -2,16 +2,11 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Title.png-eddaf0247c16f2cd01805f96e728b10b.stex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://src/ui/Title.png"
-dest_files=[ "res://.import/Title.png-eddaf0247c16f2cd01805f96e728b10b.stex" ]
-
 [params]
 
 compress/mode=0
