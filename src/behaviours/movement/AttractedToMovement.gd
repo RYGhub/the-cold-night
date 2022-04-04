@@ -3,8 +3,8 @@ class_name AttractedToMovement
 
 
 signal moving_in_direction(direction)
-signal touching_goal
-signal goal_reached
+signal touching_goal(who)
+signal goal_reached(who)
 
 
 export var movement_per_second: float
@@ -24,9 +24,9 @@ func move():
 	for slide_no in parent.get_slide_count():
 		var slide = parent.get_slide_collision(slide_no)
 		if slide.collider == goal:
-			emit_signal("touching_goal")
+			emit_signal("touching_goal", self)
 			if not _goal_reached_triggered:
-				emit_signal("goal_reached")
+				emit_signal("goal_reached", self)
 				_goal_reached_triggered = true
 
 

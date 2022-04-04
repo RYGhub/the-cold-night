@@ -15,7 +15,8 @@ func _ready():
 
 
 func set_duration(value):
-	$Duration.wait_time = value
+	if value > 0:
+		$Duration.wait_time = value
 
 func get_duration():
 	return $Duration.wait_time
@@ -26,7 +27,8 @@ func _on_Duration_timeout():
 
 
 func set_despawn(value):
-	$Despawn.wait_time = value
+	if value > 0:
+		$Despawn.wait_time = value
 
 func get_despawn():
 	return $Despawn.wait_time

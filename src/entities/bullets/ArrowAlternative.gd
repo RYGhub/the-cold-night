@@ -12,10 +12,12 @@ export var lit_damage: int = 5
 func _on_Flammable_caught_fire():
 	$Shape/Sprite.texture = lit_texture
 	$Damaging.damage = lit_damage
+	$Damaging.destroy_on_damage = false
 	$Light.visible = true
 
 
 func _on_Flammable_extinguished_fire():
 	$Shape/Sprite.texture = dim_texture
 	$Damaging.damage = dim_damage
+	$Damaging.destroy_on_damage = true
 	$Light.visible = false
