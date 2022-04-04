@@ -63,7 +63,7 @@ loot_weights = [ 80.0, 10.0, 10.0 ]
 
 [node name="Damaging" type="Node" parent="." index="5"]
 script = ExtResource( 11 )
-damage = -10.0
+damage = -6.0
 
 [connection signal="collided" from="AttractedToMovement" to="." method="_on_AttractedToMovement_collided"]
 [connection signal="moved_in_direction" from="AttractedToMovement" to="Shape/FourSidedSprite" method="_on_AttractedToMovement_moved_in_direction"]

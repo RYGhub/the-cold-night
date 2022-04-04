@@ -1,5 +1,7 @@
 extends Node
 
+
+export(PackedScene) var old_spawning
 export(PackedScene) var new_spawning
 
 
@@ -7,14 +9,11 @@ onready var target = get_tree().root.find_node("PhaseOnePlayer", true, false).ge
 onready var pickup: Area2D = get_parent()
 
 
-var previous_spawn
-
 
 func _on_picked_up():
-	previous_spawn = target.spawning
 	target.spawning = new_spawning
 	target.connect("shot", self, "_on_shot", [], CONNECT_ONESHOT)
 
 
 func _on_shot(_origin, _whatever):
-	target.spawning = previous_spawn
+	target.spawning = old_spawning
