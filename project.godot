@@ -9,11 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node",
-"class": "Alliance",
-"language": "GDScript",
-"path": "res://src/behaviours/damage/Alliance.gd"
-}, {
 "base": "KinematicBody2D",
 "class": "Arrow",
 "language": "GDScript",
@@ -90,11 +85,6 @@ _global_script_classes=[ {
 "path": "res://src/levels/ui/MuteButton.gd"
 }, {
 "base": "Node",
-"class": "Ownership",
-"language": "GDScript",
-"path": "res://src/behaviours/damage/Ownership.gd"
-}, {
-"base": "Node",
 "class": "PathMovement",
 "language": "GDScript",
 "path": "res://src/behaviours/movement/PathMovement.gd"
@@ -160,7 +150,6 @@ _global_script_classes=[ {
 "path": "res://src/Utils.gd"
 } ]
 _global_script_class_icons={
-"Alliance": "",
 "Arrow": "",
 "AttractedToMovement": "",
 "BulletMovement": "",
@@ -176,7 +165,6 @@ _global_script_class_icons={
 "FreeWhenShapeIsOffScreen": "",
 "Music": "",
 "MuteButton": "",
-"Ownership": "",
 "PathMovement": "",
 "PlayerMovement": "",
 "RNG": "",

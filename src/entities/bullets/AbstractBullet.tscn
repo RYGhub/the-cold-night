@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/behaviours/movement/BulletMovement.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/behaviours/damage/Ownership.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/behaviours/damage/Damaging.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/behaviours/damage/Damaging.gd" type="Script" id=2]
+[ext_resource path="res://src/behaviours/damage/Damageable.tscn" type="PackedScene" id=3]
 
 [node name="AbstractBullet" type="KinematicBody2D"]
 collision_layer = 4
@@ -10,9 +10,7 @@ collision_mask = 2
 
 [node name="BulletMovement" parent="." instance=ExtResource( 1 )]
 
-[node name="Ownership" parent="." instance=ExtResource( 2 )]
-
 [node name="Damaging" parent="." instance=ExtResource( 3 )]
-destroy_after_damage = true
+script = ExtResource( 2 )
 
 [connection signal="collided" from="BulletMovement" to="Damaging" method="_on_BulletMovement_collided"]

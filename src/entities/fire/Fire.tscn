@@ -64,7 +64,7 @@ position = Vector2( 0, -12 )
 z_index = 1
 frames = SubResource( 4 )
 animation = "v1"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Damageable" parent="." instance=ExtResource( 5 )]

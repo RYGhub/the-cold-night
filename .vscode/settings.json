@@ -2,8 +2,6 @@
     "files.exclude": {
         "**/*.import": true,
         "**/*.png": true,
-        "**/*.tscn": true,
-        "**/*.tres": true,
         "**/*.godot": true,
         "**/*.kra": true,
         "**/*.mp3": true,
