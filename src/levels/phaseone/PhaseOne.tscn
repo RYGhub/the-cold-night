@@ -90,7 +90,7 @@ container_name = "Enemies"
 wait_time = 2.0
 
 [node name="DecreaseEvery" parent="Entities/Containers/Enemies/TowardsFireSpawner/SpawnEveryPeriod/Period" index="0" instance=ExtResource( 8 )]
-wait_time = 15.0
+wait_time = 30.0
 multiplier = 0.5
 
 [node name="SetSpawnedGoalTo" parent="Entities/Containers/Enemies/TowardsFireSpawner/SpawnEveryPeriod" instance=ExtResource( 11 )]
@@ -109,7 +109,7 @@ container_name = "Enemies"
 wait_time = 2.0
 
 [node name="DecreaseEvery" parent="Entities/Containers/Enemies/TowardsFireSpawner2/SpawnEveryPeriod/Period" index="0" instance=ExtResource( 8 )]
-wait_time = 15.0
+wait_time = 30.0
 multiplier = 0.5
 
 [node name="SetSpawnedGoalTo" parent="Entities/Containers/Enemies/TowardsFireSpawner2/SpawnEveryPeriod" instance=ExtResource( 11 )]
@@ -128,7 +128,7 @@ container_name = "Enemies"
 wait_time = 2.0
 
 [node name="DecreaseEvery" parent="Entities/Containers/Enemies/TowardsFireSpawner3/SpawnEveryPeriod/Period" index="0" instance=ExtResource( 8 )]
-wait_time = 15.0
+wait_time = 30.0
 multiplier = 0.5
 
 [node name="SetSpawnedGoalTo" parent="Entities/Containers/Enemies/TowardsFireSpawner3/SpawnEveryPeriod" instance=ExtResource( 11 )]
@@ -145,7 +145,7 @@ spawning = ExtResource( 5 )
 container_name = "Enemies"
 
 [node name="DecreaseEvery" parent="Entities/Containers/Enemies/TowardsPlayerSpawner/SpawnEveryPeriod/Period" index="0" instance=ExtResource( 8 )]
-wait_time = 15.0
+wait_time = 30.0
 multiplier = 0.5
 
 [node name="SetSpawnedGoalTo" parent="Entities/Containers/Enemies/TowardsPlayerSpawner/SpawnEveryPeriod" instance=ExtResource( 11 )]
