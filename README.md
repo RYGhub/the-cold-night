@@ -1,6 +1,8 @@
-# _untitled project_
+# _The Cold Night_
 
-_unknown tagline_
+_Keep the campfire lit to stop something terrible from awakening!_
+
+![A campfire](media/OpenGraph.png)
 
 ## Ludum Dare 50: _category_ entry
 
