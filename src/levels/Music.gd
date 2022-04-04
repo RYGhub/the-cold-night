@@ -30,6 +30,8 @@ func update_state():
 	$Drum.bus = "Master" if $Drum.volume_db > -60 else "Mute"
 	$BossDrum.bus = "Master" if $BossDrum.volume_db > -60 else "Mute"
 	$BossGuitar.bus = "Master" if $BossGuitar.volume_db > -60 else "Mute"
+	$Wind.bus = "Master" if $Wind.volume_db > -60 else "Mute"
+	$FireCrackle.bus = "Master" if $FireCrackle.volume_db > -60 else "Mute"
 
 
 

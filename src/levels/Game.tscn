@@ -1,5 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
+[ext_resource path="res://src/sounds/FireCrackle.mp3" type="AudioStream" id=1]
+[ext_resource path="res://src/sounds/Wind.mp3" type="AudioStream" id=2]
 [ext_resource path="res://src/music/BossDrum.mp3" type="AudioStream" id=3]
 [ext_resource path="res://src/mechanics/RNG.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/levels/Game.gd" type="Script" id=6]
@@ -39,5 +41,15 @@ autoplay = true
 
 [node name="BossGuitar" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 7 )
+volume_db = -80.0
+autoplay = true
+
+[node name="FireCrackle" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 1 )
+volume_db = -80.0
+autoplay = true
+
+[node name="Wind" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 2 )
 volume_db = -80.0
 autoplay = true
