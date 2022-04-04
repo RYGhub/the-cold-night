@@ -58,14 +58,6 @@ tile_data = PoolIntArray( 0, 0, 131074, 1, 0, 131074, 2, 0, 131074, 3, 0, 131074
 
 [node name="Darkness" parent="." instance=ExtResource( 13 )]
 
-[node name="Particles2D" type="Particles2D" parent="."]
-position = Vector2( 640, -120 )
-amount = 1000
-lifetime = 10.0
-visibility_rect = Rect2( -640, 0, 1280, 640 )
-process_material = SubResource( 2 )
-texture = ExtResource( 7 )
-
 [node name="Entities" type="Node" parent="."]
 
 [node name="PhaseOnePlayer" parent="Entities" instance=ExtResource( 17 )]
@@ -195,6 +187,14 @@ autostart = false
 
 [node name="ChangeFireIntensity" parent="Entities/Containers/Pickups/BranchPickup4" index="3"]
 amount_per_second = 30.0
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 640, -120 )
+amount = 1000
+lifetime = 6.0
+visibility_rect = Rect2( -640, 0, 1280, 640 )
+process_material = SubResource( 2 )
+texture = ExtResource( 7 )
 
 [connection signal="spawned" from="Entities/Containers/Enemies/TowardsFireSpawner/SpawnEveryPeriod" to="Entities/Containers/Enemies/TowardsFireSpawner/SpawnEveryPeriod/SetSpawnedGoalTo" method="_on_SpawnEveryPeriod_spawned"]
 [connection signal="spawned" from="Entities/Containers/Enemies/TowardsFireSpawner/SpawnEveryPeriod" to="Entities/Containers/Enemies/TowardsFireSpawner/TeleportToScreenEdge" method="_on_SpawnEveryPeriod_spawned"]
