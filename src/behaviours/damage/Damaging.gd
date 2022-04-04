@@ -27,6 +27,5 @@ func do_damage(to, multiplier):
 		parent.queue_free()
 
 
-
 func _on_BulletMovement_collided(_origin, collision):
 	do_damage(collision.collider, 1)

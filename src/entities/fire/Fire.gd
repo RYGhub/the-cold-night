@@ -3,7 +3,7 @@ class_name Fire
 
 
 func _on_Flame_body_entered(body):
-	var flammable = body.get_node("Flammable")
+	var flammable = body.get_node_or_null("Flammable")
 	if flammable != null:
 		flammable.catch_fire()
 

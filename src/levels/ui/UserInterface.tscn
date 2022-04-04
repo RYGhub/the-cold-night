@@ -55,7 +55,7 @@ margin_bottom = 65.0
 value = 100.0
 texture_under = ExtResource( 5 )
 texture_progress = ExtResource( 3 )
-texture_progress_offset = Vector2( 10, 5 )
+texture_progress_offset = Vector2( 2, 0 )
 script = ExtResource( 9 )
 
 [node name="MuteButton" type="Button" parent="TheDarkNightUI"]

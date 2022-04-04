@@ -13,8 +13,8 @@ var previous_spawn
 func _on_picked_up():
 	previous_spawn = target.spawning
 	target.spawning = new_spawning
-	target.connect("shot", self, "_on_shot")
+	target.connect("shot", self, "_on_shot", [], CONNECT_ONESHOT)
 
 
-func _on_shot():
+func _on_shot(_origin, _whatever):
 	target.spawning = previous_spawn

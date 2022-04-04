@@ -1,17 +1,17 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/ui/fonts/SourceSerifPro-Light.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://src/levels/ui/ui/Title.png" type="Texture" id=2]
+[ext_resource path="res://src/levels/ui/Title.png" type="Texture" id=2]
 [ext_resource path="res://src/levels/ui/PlayButton.png" type="Texture" id=3]
 [ext_resource path="res://src/entities/fire/Fire.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/levels/ui/fonts/SourceSerifPro-Regular.ttf" type="DynamicFontData" id=5]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=1]
 size = 22
 font_data = ExtResource( 5 )
 
 [sub_resource type="Theme" id=2]
-default_font = SubResource( 4 )
+default_font = SubResource( 1 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 70
@@ -44,9 +44,6 @@ scale = Vector2( 4, 4 )
 
 [node name="FlameSprite" parent="TheDarkNightUI/MenuFire/Flame/Shape" index="0"]
 frame = 0
-
-[node name="Damaging" parent="TheDarkNightUI/MenuFire" index="3"]
-damage = -5.0
 
 [node name="Play" type="Button" parent="TheDarkNightUI"]
 anchor_left = 1.0

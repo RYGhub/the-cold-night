@@ -16,7 +16,7 @@ script = ExtResource( 3 )
 dim_texture = ExtResource( 2 )
 dim_damage = -10.0
 lit_texture = ExtResource( 7 )
-lit_damage = -10
+lit_damage = -10.0
 lit_piercing = true
 
 [node name="Shape" type="CollisionShape2D" parent="." index="0"]

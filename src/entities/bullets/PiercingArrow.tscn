@@ -22,4 +22,4 @@ texture = ExtResource( 2 )
 movement_per_second = 200.0
 
 [node name="Damaging" parent="." index="2"]
-damage = 50.0
+damage = -50.0
