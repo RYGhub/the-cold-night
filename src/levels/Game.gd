@@ -12,3 +12,7 @@ func set_survival_seconds(value):
 
 func _process(delta):
 	set_survival_seconds(survival_seconds + delta)
+
+
+func _on_Fire_intensity_reached_min():
+	print("Game over!")

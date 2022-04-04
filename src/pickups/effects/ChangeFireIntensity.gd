@@ -1,9 +1,8 @@
 extends Node
 
 
-export var target_path: NodePath = NodePath("../../Fire")
 export var amount_per_second: float = 0.2
-onready var target = get_node(target_path)
+onready var target = get_tree().root.find_node("Fire", true, false)
 onready var pickup: Area2D = get_parent()
 
 var active = false

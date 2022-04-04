@@ -8,6 +8,7 @@ signal shot(bullet)
 export var bullet: PackedScene
 export var cooldown: float setget set_cooldown, get_cooldown
 export var rapid_fire: bool
+export var angle_offset: float
 
 
 onready var parent: Node2D = get_parent()
@@ -25,7 +26,7 @@ func shoot(target):
 	var node = bullet.instance()
 	container.add_child(node)
 	node.set_position(global_position)
-	node.set_rotation(node.get_angle_to(target))
+	node.set_rotation(node.get_angle_to(target) + angle_offset)
 	node.get_node("Ownership").entity_owner = parent
 	node.add_collision_exception_with(parent)
 	emit_signal("shot")

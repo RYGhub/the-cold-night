@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WeaponCrossbow.png-0a9cc264e092ccff57799323e11448eb.stex"
+path="res://.import/WeaponCrossbow.png-e19361cc3a5a60e770b810055c1aa183.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/mechanics/WeaponCrossbow.png"
-dest_files=[ "res://.import/WeaponCrossbow.png-0a9cc264e092ccff57799323e11448eb.stex" ]
+source_file="res://src/pickups/WeaponCrossbow.png"
+dest_files=[ "res://.import/WeaponCrossbow.png-e19361cc3a5a60e770b810055c1aa183.stex" ]
 
 [params]
 

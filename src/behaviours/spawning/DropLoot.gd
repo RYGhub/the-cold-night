@@ -24,7 +24,7 @@ func select_drop() -> PackedScene:
 	
 	var result = rng.randf_range(0.0, total_weights)
 	
-	for i in range(loot_types.len()):
+	for i in range(len(loot_types)):
 		var loot_type = loot_types[i]
 		var loot_weight = loot_weights[i]
 		result -= loot_weight

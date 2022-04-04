@@ -8,13 +8,12 @@ signal goal_reached
 
 
 export var movement_per_second: float
-export var goal_path: NodePath
 
 
 onready var parent: KinematicBody2D = get_parent()
-onready var goal: PhysicsBody2D = get_node(goal_path) if goal_path else null
 
 
+var goal: Node2D = null
 var _goal_reached_triggered: bool = false
 
 
