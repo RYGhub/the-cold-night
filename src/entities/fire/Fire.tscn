@@ -49,7 +49,7 @@ max_health = 200.0
 health = 100.0
 
 [node name="Damaging" parent="Firepit" instance=ExtResource( 9 )]
-friendly_fire = true
+damage = -2.0
 
 [node name="DamageEveryTick" parent="Firepit/Damaging" instance=ExtResource( 6 )]
 
@@ -73,7 +73,7 @@ position = Vector2( 0, -12 )
 z_index = 1
 frames = SubResource( 4 )
 animation = "v1"
-frame = 2
+frame = 4
 playing = true
 
 [connection signal="health_changed" from="Firepit/Damageable" to="." method="_on_Damageable_health_changed"]
