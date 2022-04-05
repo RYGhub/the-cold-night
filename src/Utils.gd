@@ -6,6 +6,7 @@ static func is_between(m, val, x):
 
 
 static func format_time(value):
+	# warning-ignore: NARROWING_CONVERSION
 	var minutes: int = floor(value / 60)
 	var seconds_and_millis: float = value - minutes * 60
 	var seconds: int = int(seconds_and_millis)
