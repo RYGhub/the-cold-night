@@ -22,34 +22,31 @@ script = ExtResource( 11 )
 [node name="Bell" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 20 )
 volume_db = -80.0
-autoplay = true
 
 [node name="Choir" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 21 )
 volume_db = -80.0
-autoplay = true
 
 [node name="Drum" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 19 )
 volume_db = -80.0
-autoplay = true
 
 [node name="BossDrum" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 3 )
 volume_db = -80.0
-autoplay = true
 
 [node name="BossGuitar" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 7 )
 volume_db = -80.0
-autoplay = true
 
 [node name="FireCrackle" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 1 )
 volume_db = -80.0
-autoplay = true
 
 [node name="Wind" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 2 )
 volume_db = -80.0
-autoplay = true
+
+[connection signal="started_bad_ending" from="." to="Music" method="_on_Game_started_bad_ending"]
+[connection signal="started_main_menu" from="." to="Music" method="_on_Game_started_main_menu"]
+[connection signal="started_phase_one" from="." to="Music" method="_on_Game_started_phase_one"]

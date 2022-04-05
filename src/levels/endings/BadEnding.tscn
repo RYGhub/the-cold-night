@@ -78,3 +78,13 @@ autowrap = true
 
 [node name="Credits" parent="TheDarkNightUI/LabelTitle" instance=ExtResource( 5 )]
 margin_top = 300.0
+
+[node name="Score" type="Label" parent="TheDarkNightUI"]
+margin_left = 341.0
+margin_top = -209.0
+margin_right = 505.0
+margin_bottom = -158.0
+custom_fonts/font = SubResource( 8 )
+text = "0:00.000"
+align = 1
+autowrap = true

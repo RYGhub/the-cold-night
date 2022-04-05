@@ -6,4 +6,4 @@ onready var parent = get_parent()
 
 
 func _process(_delta):
-	parent.shoot(parent.rotation)
+	parent.shoot(parent.parent.rotation)
