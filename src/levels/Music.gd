@@ -10,6 +10,8 @@ export var drum_min: float = 100
 export var drum_max: float = 160
 export var crackle_min: float = 0
 export var crackle_max: float = 170
+export var boss_min: float = 170
+export var boss_max: float = 195
 export var muted: bool setget set_mute, get_mute
 
 
@@ -36,6 +38,7 @@ func _on_Fire_intensity_changed(_origin, value):
 	$Bell.volume_db = (smoothstep(bell_min, bell_max, value) - 1) * 60
 	$Drum.volume_db = (smoothstep(drum_min, drum_max, value) - 1) * 60
 	$FireCrackle.volume_db = (smoothstep(crackle_min, crackle_max, value) - 1) * 60
+	$BossDrum.volume_db = (smoothstep(boss_min, boss_max, value) - 1) * 60
 	update_state()
 
 
