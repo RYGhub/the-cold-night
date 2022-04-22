@@ -6,14 +6,14 @@ _Keep the campfire lit to stop something terrible from awakening!_
 
 ## Ludum Dare 50: Jam entry
 
-[![Overall: TBD](https://img.shields.io/badge/overall-TBD-lightgrey) 
-![Fun: TBD](https://img.shields.io/badge/fun-TBD-lightgrey) 
-![Innovation: TBD](https://img.shields.io/badge/innovation-TBD-lightgrey) 
-![Theme: TBD](https://img.shields.io/badge/theme-TBD-lightgrey) 
-![Graphics: TBD](https://img.shields.io/badge/graphics-TBD-lightgrey) 
-![Audio: TBD](https://img.shields.io/badge/audio-TBD-lightgrey) 
-![Humor: TBD](https://img.shields.io/badge/humor-TBD-lightgrey)
-![Mood: TBD](https://img.shields.io/badge/mood-TBD-lightgrey)](YOUR-GAME-URL-HERE)
+[![Overall: 3.8](https://img.shields.io/badge/overall-3.8-yellowgreen) 
+![Fun: 3.7](https://img.shields.io/badge/fun-3.7-yellowgreen) 
+![Innovation: 3.3](https://img.shields.io/badge/innovation-3.3-yellowgreen) 
+![Theme: 4.2](https://img.shields.io/badge/theme-4.2-green) 
+![Graphics: 3.8](https://img.shields.io/badge/graphics-3.8-yellowgreen) 
+![Audio: 3.8](https://img.shields.io/badge/audio-3.8-yellowgreen) 
+![Humor: 2.8](https://img.shields.io/badge/humor-2.8-yellow)
+![Mood: 4.0](https://img.shields.io/badge/mood-4.0-green)](https://ldjam.com/events/ludum-dare/50/the-cold-night)
 
 ## Credits
 
